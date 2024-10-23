@@ -10,15 +10,7 @@ const axiom: Linter.Config[] = [
       '@typescript-eslint/no-floating-promises': 'error',
       // Reason: for..of works on any iterable
       // Reason: for..of supports all kinds of control flow in the loop body, like `continue`, `break`, `return`, `yield` and `await`.
-      '@typescript-eslint/prefer-for-of': 'error',
-      // Reason: prefer runtime private fields over compile time private properties
-      'no-restricted-syntax': [
-        'error',
-        {
-          selector: ':matches(PropertyDefinition)[accessibility="private"]',
-          message: 'Use #private fields instead'
-        }
-      ]
+      '@typescript-eslint/prefer-for-of': 'error'
     }
   }
 ]
