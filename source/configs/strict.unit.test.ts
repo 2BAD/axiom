@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import strict from './strict.ts'
+import { strict } from './strict.ts'
 
 describe('strict', () => {
   it('should match the snapshot', () => {
