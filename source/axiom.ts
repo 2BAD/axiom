@@ -1,9 +1,10 @@
 import { includeIgnoreFile } from '@eslint/compat'
 import type { Linter } from 'eslint'
 import { resolve } from 'node:path'
-import axiomRules from './configs/axiom.ts'
-import strict from './configs/strict.ts'
-import stylistic from './configs/stylistic.ts'
+import { axiom as axiomRules } from './configs/axiom.ts'
+import { strict } from './configs/strict.ts'
+import { stylistic } from './configs/stylistic.ts'
+// biome-ignore lint/style/noNamespaceImport: acceptable for this case
 import * as plugins from './plugins/index.ts'
 
 /**

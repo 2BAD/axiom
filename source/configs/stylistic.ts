@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint'
 
-const stylistic: Linter.Config[] = [
+export const stylistic: Linter.Config[] = [
   {
     name: 'axiom/rules/stylistic',
     rules: {
@@ -9,5 +9,3 @@ const stylistic: Linter.Config[] = [
     }
   }
 ]
-
-export default stylistic

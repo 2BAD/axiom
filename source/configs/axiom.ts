@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint'
 
-const axiom: Linter.Config[] = [
+export const axiom: Linter.Config[] = [
   {
     name: 'axiom/rules/all',
     rules: {
@@ -14,5 +14,3 @@ const axiom: Linter.Config[] = [
     }
   }
 ]
-
-export default axiom

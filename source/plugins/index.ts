@@ -1,6 +1,7 @@
-export { default as import } from './import.ts'
-export { default as jsdoc } from './jsdoc.ts'
-export { default as neostandard } from './neostandard.ts'
-export { default as node } from './node.ts'
-export { default as promise } from './promise.ts'
-export { default as vitest } from './vitest.ts'
+// biome-ignore lint/performance/noBarrelFile: acceptable for this case
+export { config as import } from './import.ts'
+export { config as jsdoc } from './jsdoc.ts'
+export { config as neostandard } from './neostandard.ts'
+export { config as node } from './node.ts'
+export { config as promise } from './promise.ts'
+export { config as vitest } from './vitest.ts'

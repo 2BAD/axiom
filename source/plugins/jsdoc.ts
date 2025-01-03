@@ -10,6 +10,7 @@ export const config: Linter.Config[] = [
     rules: {
       'jsdoc/check-param-names': ['warn', { checkDestructured: false }],
       'jsdoc/require-hyphen-before-param-description': 'warn',
+      // biome-ignore lint/style/useNamingConvention: external
       'jsdoc/require-jsdoc': ['warn', { require: { FunctionExpression: true, ArrowFunctionExpression: true } }],
       'jsdoc/require-param': ['warn', { checkDestructured: false }],
       'jsdoc/require-returns': 'off',
@@ -18,5 +19,3 @@ export const config: Linter.Config[] = [
     }
   }
 ]
-
-export default config
