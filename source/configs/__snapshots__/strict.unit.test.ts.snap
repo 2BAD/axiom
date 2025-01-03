@@ -1142,7 +1142,6 @@ exports[`strict > should include the js all config 1`] = `
                 "additionalProperties": false,
                 "properties": {
                   "treatUndefinedAsUnspecified": {
-                    "default": false,
                     "type": "boolean",
                   },
                 },
@@ -5106,7 +5105,6 @@ You must still type the parameters of the function.",
                 "additionalProperties": false,
                 "properties": {
                   "capIsConstructor": {
-                    "default": true,
                     "type": "boolean",
                   },
                 },
@@ -6568,19 +6566,15 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "additionalProperties": false,
                 "properties": {
                   "allowShortCircuit": {
-                    "default": false,
                     "type": "boolean",
                   },
                   "allowTaggedTemplates": {
-                    "default": false,
                     "type": "boolean",
                   },
                   "allowTernary": {
-                    "default": false,
                     "type": "boolean",
                   },
                   "enforceForJSX": {
-                    "default": false,
                     "type": "boolean",
                   },
                 },
@@ -6763,9 +6757,10 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "recommended": "strict",
               "url": "https://typescript-eslint.io/rules/no-useless-constructor",
             },
-            "hasSuggestions": undefined,
+            "hasSuggestions": true,
             "messages": {
               "noUselessConstructor": "Useless constructor.",
+              "removeConstructor": "Remove the constructor.",
             },
             "schema": [],
             "type": "problem",
@@ -9936,7 +9931,6 @@ exports[`strict > should match the snapshot 1`] = `
                   "additionalProperties": false,
                   "properties": {
                     "treatUndefinedAsUnspecified": {
-                      "default": false,
                       "type": "boolean",
                     },
                   },
@@ -13900,7 +13894,6 @@ You must still type the parameters of the function.",
                   "additionalProperties": false,
                   "properties": {
                     "capIsConstructor": {
-                      "default": true,
                       "type": "boolean",
                     },
                   },
@@ -15362,19 +15355,15 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                   "additionalProperties": false,
                   "properties": {
                     "allowShortCircuit": {
-                      "default": false,
                       "type": "boolean",
                     },
                     "allowTaggedTemplates": {
-                      "default": false,
                       "type": "boolean",
                     },
                     "allowTernary": {
-                      "default": false,
                       "type": "boolean",
                     },
                     "enforceForJSX": {
-                      "default": false,
                       "type": "boolean",
                     },
                   },
@@ -15557,9 +15546,10 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "recommended": "strict",
                 "url": "https://typescript-eslint.io/rules/no-useless-constructor",
               },
-              "hasSuggestions": undefined,
+              "hasSuggestions": true,
               "messages": {
                 "noUselessConstructor": "Useless constructor.",
+                "removeConstructor": "Remove the constructor.",
               },
               "schema": [],
               "type": "problem",
