@@ -6,7 +6,7 @@ exports[`strict > should include the js all config 1`] = `
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.20.0",
+        "version": "8.24.0",
       },
       "parseForESLint": [Function],
     },
@@ -768,7 +768,7 @@ exports[`strict > should include the js all config 1`] = `
       },
       "meta": {
         "name": "@typescript-eslint/eslint-plugin",
-        "version": "8.20.0",
+        "version": "8.24.0",
       },
       "rules": {
         "adjacent-overload-signatures": {
@@ -1030,7 +1030,7 @@ exports[`strict > should include the js all config 1`] = `
                     "type": "array",
                   },
                   "ignoreClassesThatImplementAnInterface": {
-                    "description": "Makes the rule ignore class members that are defined within a class that \`implements\` a type",
+                    "description": "Whether to ignore class members that are defined within a class that \`implements\` a type.",
                     "oneOf": [
                       {
                         "description": "Ignore all classes that implement an interface",
@@ -1046,7 +1046,7 @@ exports[`strict > should include the js all config 1`] = `
                     ],
                   },
                   "ignoreOverrideMethods": {
-                    "description": "Ignore members marked with the \`override\` modifier",
+                    "description": "Whether to ignore members marked with the \`override\` modifier.",
                     "type": "boolean",
                   },
                 },
@@ -5589,7 +5589,11 @@ You must still type the parameters of the function.",
               "noIterableSpreadInObject": "Using the spread operator on an Iterable in an object can cause unexpected behavior.",
               "noMapSpreadInObject": "Using the spread operator on a Map in an object will result in an empty object. Did you mean to use \`Object.fromEntries(map)\` instead?",
               "noPromiseSpreadInObject": "Using the spread operator on Promise in an object can cause unexpected behavior. Did you forget to await the promise?",
-              "noStringSpread": "Using the spread operator on a string can cause unexpected behavior. Prefer \`.split('')\` instead.",
+              "noStringSpread": "Using the spread operator on a string can mishandle special characters, as can \`.split("")\`.
+- \`...\` produces Unicode code points, which will decompose complex emojis into individual emojis
+- .split("") produces UTF-16 code units, which breaks rich characters in many languages
+Consider using \`Intl.Segmenter\` for locale-aware string decomposition.
+Otherwise, if you don't need to preserve emojis or other non-Ascii characters, disable this lint rule on this line or configure the 'allow' rule option.",
             },
             "schema": [
               {
@@ -6395,6 +6399,7 @@ You must still type the parameters of the function.",
             {
               "allowComparingNullableBooleansToFalse": true,
               "allowComparingNullableBooleansToTrue": true,
+              "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false,
             },
           ],
           "meta": {
@@ -6411,6 +6416,7 @@ You must still type the parameters of the function.",
               "comparingNullableToTrueNegated": "This expression unnecessarily compares a nullable boolean value to true instead of negating it.",
               "direct": "This expression unnecessarily compares a boolean value to a boolean instead of using it directly.",
               "negated": "This expression unnecessarily compares a boolean value to a boolean instead of negating it.",
+              "noStrictNullCheck": "This rule requires the \`strictNullChecks\` compiler option to be turned on to function correctly.",
             },
             "schema": [
               {
@@ -6424,6 +6430,10 @@ You must still type the parameters of the function.",
                     "description": "Whether to allow comparisons between nullable boolean variables and \`true\`.",
                     "type": "boolean",
                   },
+                  "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": {
+                    "description": "Unless this is set to \`true\`, the rule will error on every file whose \`tsconfig.json\` does _not_ have the \`strictNullChecks\` compiler option (or \`strict\`) set to \`true\`.",
+                    "type": "boolean",
+                  },
                 },
                 "type": "object",
               },
@@ -6435,7 +6445,7 @@ You must still type the parameters of the function.",
           "create": [Function],
           "defaultOptions": [
             {
-              "allowConstantLoopConditions": false,
+              "allowConstantLoopConditions": "never",
               "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false,
               "checkTypePredicates": false,
             },
@@ -6468,7 +6478,19 @@ You must still type the parameters of the function.",
                 "properties": {
                   "allowConstantLoopConditions": {
                     "description": "Whether to ignore constant loop conditions, such as \`while (true)\`.",
-                    "type": "boolean",
+                    "oneOf": [
+                      {
+                        "type": "boolean",
+                      },
+                      {
+                        "enum": [
+                          "always",
+                          "never",
+                          "only-allowed-literals",
+                        ],
+                        "type": "string",
+                      },
+                    ],
                   },
                   "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": {
                     "description": "Whether to not error when running with a tsconfig that has strictNullChecks turned.",
@@ -9082,7 +9104,7 @@ exports[`strict > should match the snapshot 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.20.0",
+          "version": "8.24.0",
         },
         "parseForESLint": [Function],
       },
@@ -9844,7 +9866,7 @@ exports[`strict > should match the snapshot 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.20.0",
+          "version": "8.24.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -10106,7 +10128,7 @@ exports[`strict > should match the snapshot 1`] = `
                       "type": "array",
                     },
                     "ignoreClassesThatImplementAnInterface": {
-                      "description": "Makes the rule ignore class members that are defined within a class that \`implements\` a type",
+                      "description": "Whether to ignore class members that are defined within a class that \`implements\` a type.",
                       "oneOf": [
                         {
                           "description": "Ignore all classes that implement an interface",
@@ -10122,7 +10144,7 @@ exports[`strict > should match the snapshot 1`] = `
                       ],
                     },
                     "ignoreOverrideMethods": {
-                      "description": "Ignore members marked with the \`override\` modifier",
+                      "description": "Whether to ignore members marked with the \`override\` modifier.",
                       "type": "boolean",
                     },
                   },
@@ -14665,7 +14687,11 @@ You must still type the parameters of the function.",
                 "noIterableSpreadInObject": "Using the spread operator on an Iterable in an object can cause unexpected behavior.",
                 "noMapSpreadInObject": "Using the spread operator on a Map in an object will result in an empty object. Did you mean to use \`Object.fromEntries(map)\` instead?",
                 "noPromiseSpreadInObject": "Using the spread operator on Promise in an object can cause unexpected behavior. Did you forget to await the promise?",
-                "noStringSpread": "Using the spread operator on a string can cause unexpected behavior. Prefer \`.split('')\` instead.",
+                "noStringSpread": "Using the spread operator on a string can mishandle special characters, as can \`.split("")\`.
+- \`...\` produces Unicode code points, which will decompose complex emojis into individual emojis
+- .split("") produces UTF-16 code units, which breaks rich characters in many languages
+Consider using \`Intl.Segmenter\` for locale-aware string decomposition.
+Otherwise, if you don't need to preserve emojis or other non-Ascii characters, disable this lint rule on this line or configure the 'allow' rule option.",
               },
               "schema": [
                 {
@@ -15471,6 +15497,7 @@ You must still type the parameters of the function.",
               {
                 "allowComparingNullableBooleansToFalse": true,
                 "allowComparingNullableBooleansToTrue": true,
+                "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false,
               },
             ],
             "meta": {
@@ -15487,6 +15514,7 @@ You must still type the parameters of the function.",
                 "comparingNullableToTrueNegated": "This expression unnecessarily compares a nullable boolean value to true instead of negating it.",
                 "direct": "This expression unnecessarily compares a boolean value to a boolean instead of using it directly.",
                 "negated": "This expression unnecessarily compares a boolean value to a boolean instead of negating it.",
+                "noStrictNullCheck": "This rule requires the \`strictNullChecks\` compiler option to be turned on to function correctly.",
               },
               "schema": [
                 {
@@ -15500,6 +15528,10 @@ You must still type the parameters of the function.",
                       "description": "Whether to allow comparisons between nullable boolean variables and \`true\`.",
                       "type": "boolean",
                     },
+                    "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": {
+                      "description": "Unless this is set to \`true\`, the rule will error on every file whose \`tsconfig.json\` does _not_ have the \`strictNullChecks\` compiler option (or \`strict\`) set to \`true\`.",
+                      "type": "boolean",
+                    },
                   },
                   "type": "object",
                 },
@@ -15511,7 +15543,7 @@ You must still type the parameters of the function.",
             "create": [Function],
             "defaultOptions": [
               {
-                "allowConstantLoopConditions": false,
+                "allowConstantLoopConditions": "never",
                 "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false,
                 "checkTypePredicates": false,
               },
@@ -15544,7 +15576,19 @@ You must still type the parameters of the function.",
                   "properties": {
                     "allowConstantLoopConditions": {
                       "description": "Whether to ignore constant loop conditions, such as \`while (true)\`.",
-                      "type": "boolean",
+                      "oneOf": [
+                        {
+                          "type": "boolean",
+                        },
+                        {
+                          "enum": [
+                            "always",
+                            "never",
+                            "only-allowed-literals",
+                          ],
+                          "type": "string",
+                        },
+                      ],
                     },
                     "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": {
                       "description": "Whether to not error when running with a tsconfig that has strictNullChecks turned.",
