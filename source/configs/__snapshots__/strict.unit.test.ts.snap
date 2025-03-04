@@ -6,7 +6,7 @@ exports[`strict > should include the js all config 1`] = `
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.24.0",
+        "version": "8.26.0",
       },
       "parseForESLint": [Function],
     },
@@ -768,7 +768,7 @@ exports[`strict > should include the js all config 1`] = `
       },
       "meta": {
         "name": "@typescript-eslint/eslint-plugin",
-        "version": "8.24.0",
+        "version": "8.26.0",
       },
       "rules": {
         "adjacent-overload-signatures": {
@@ -1606,6 +1606,7 @@ exports[`strict > should include the js all config 1`] = `
               "allowArgumentsExplicitlyTypedAsAny": false,
               "allowDirectConstAssertionInArrowFunctions": true,
               "allowHigherOrderFunctions": true,
+              "allowOverloadFunctions": false,
               "allowTypedFunctionExpressions": true,
               "allowedNames": [],
             },
@@ -1638,6 +1639,10 @@ You must still type the parameters of the function.",
                   "allowHigherOrderFunctions": {
                     "description": "Whether to ignore return type annotations on functions immediately returning another function expression.
 You must still type the parameters of the function.",
+                    "type": "boolean",
+                  },
+                  "allowOverloadFunctions": {
+                    "description": "Whether to ignore return type annotations on functions with overload signatures.",
                     "type": "boolean",
                   },
                   "allowTypedFunctionExpressions": {
@@ -5150,7 +5155,7 @@ You must still type the parameters of the function.",
           "defaultOptions": [],
           "meta": {
             "docs": {
-              "description": "Disallow the use of \`eval()\`-like methods",
+              "description": "Disallow the use of \`eval()\`-like functions",
               "extendsBaseRule": true,
               "recommended": "recommended",
               "requiresTypeChecking": true,
@@ -5581,7 +5586,9 @@ You must still type the parameters of the function.",
               "requiresTypeChecking": true,
               "url": "https://typescript-eslint.io/rules/no-misused-spread",
             },
+            "hasSuggestions": true,
             "messages": {
+              "addAwait": "Add await operator.",
               "noArraySpreadInObject": "Using the spread operator on an array in an object will result in a list of indices.",
               "noClassDeclarationSpreadInObject": "Using the spread operator on class declarations will spread only their static properties, and will lose their class prototype.",
               "noClassInstanceSpreadInObject": "Using the spread operator on class instances will lose their class prototype.",
@@ -5594,6 +5601,7 @@ You must still type the parameters of the function.",
 - .split("") produces UTF-16 code units, which breaks rich characters in many languages
 Consider using \`Intl.Segmenter\` for locale-aware string decomposition.
 Otherwise, if you don't need to preserve emojis or other non-Ascii characters, disable this lint rule on this line or configure the 'allow' rule option.",
+              "replaceMapSpreadInObject": "Replace map spread in object with \`Object.fromEntries()\`",
             },
             "schema": [
               {
@@ -8689,17 +8697,17 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
             },
             "hasSuggestions": true,
             "messages": {
-              "conditionErrorAny": "Unexpected any value in conditional. An explicit comparison or type conversion is required.",
-              "conditionErrorNullableBoolean": "Unexpected nullable boolean value in conditional. Please handle the nullish case explicitly.",
-              "conditionErrorNullableEnum": "Unexpected nullable enum value in conditional. Please handle the nullish/zero/NaN cases explicitly.",
-              "conditionErrorNullableNumber": "Unexpected nullable number value in conditional. Please handle the nullish/zero/NaN cases explicitly.",
-              "conditionErrorNullableObject": "Unexpected nullable object value in conditional. An explicit null check is required.",
-              "conditionErrorNullableString": "Unexpected nullable string value in conditional. Please handle the nullish/empty cases explicitly.",
+              "conditionErrorAny": "Unexpected any value in {{context}}. An explicit comparison or type conversion is required.",
+              "conditionErrorNullableBoolean": "Unexpected nullable boolean value in {{context}}. Please handle the nullish case explicitly.",
+              "conditionErrorNullableEnum": "Unexpected nullable enum value in {{context}}. Please handle the nullish/zero/NaN cases explicitly.",
+              "conditionErrorNullableNumber": "Unexpected nullable number value in {{context}}. Please handle the nullish/zero/NaN cases explicitly.",
+              "conditionErrorNullableObject": "Unexpected nullable object value in {{context}}. An explicit null check is required.",
+              "conditionErrorNullableString": "Unexpected nullable string value in {{context}}. Please handle the nullish/empty cases explicitly.",
               "conditionErrorNullish": "Unexpected nullish value in conditional. The condition is always false.",
-              "conditionErrorNumber": "Unexpected number value in conditional. An explicit zero/NaN check is required.",
-              "conditionErrorObject": "Unexpected object value in conditional. The condition is always true.",
+              "conditionErrorNumber": "Unexpected number value in {{context}}. An explicit zero/NaN check is required.",
+              "conditionErrorObject": "Unexpected object value in {{context}}. The condition is always true.",
               "conditionErrorOther": "Unexpected value in conditional. A boolean expression is required.",
-              "conditionErrorString": "Unexpected string value in conditional. An explicit empty string check is required.",
+              "conditionErrorString": "Unexpected string value in {{context}}. An explicit empty string check is required.",
               "conditionFixCastBoolean": "Explicitly convert value to a boolean (\`Boolean(value)\`)",
               "conditionFixCompareArrayLengthNonzero": "Change condition to check array's length (\`value.length > 0\`)",
               "conditionFixCompareArrayLengthZero": "Change condition to check array's length (\`value.length === 0\`)",
@@ -8716,7 +8724,6 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "explicitBooleanReturnType": "Add an explicit \`boolean\` return type annotation.",
               "noStrictNullCheck": "This rule requires the \`strictNullChecks\` compiler option to be turned on to function correctly.",
               "predicateCannotBeAsync": "Predicate function should not be 'async'; expected a boolean return type.",
-              "predicateReturnsNonBoolean": "Predicate function should return a boolean.",
             },
             "schema": [
               {
@@ -8972,6 +8979,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
           "defaultOptions": [
             {
               "ignoreDifferentlyNamedParameters": false,
+              "ignoreOverloadsWithDifferentJSDoc": false,
             },
           ],
           "meta": {
@@ -8991,6 +8999,10 @@ If your function does not access \`this\`, you can annotate it with \`this: void
                 "properties": {
                   "ignoreDifferentlyNamedParameters": {
                     "description": "Whether two parameters with different names at the same index should be considered different even if their types are the same.",
+                    "type": "boolean",
+                  },
+                  "ignoreOverloadsWithDifferentJSDoc": {
+                    "description": "Whether two overloads with different JSDoc comments should be considered different even if their parameter and return types are the same.",
                     "type": "boolean",
                   },
                 },
@@ -9104,7 +9116,7 @@ exports[`strict > should match the snapshot 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.24.0",
+          "version": "8.26.0",
         },
         "parseForESLint": [Function],
       },
@@ -9866,7 +9878,7 @@ exports[`strict > should match the snapshot 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.24.0",
+          "version": "8.26.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -10704,6 +10716,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "allowArgumentsExplicitlyTypedAsAny": false,
                 "allowDirectConstAssertionInArrowFunctions": true,
                 "allowHigherOrderFunctions": true,
+                "allowOverloadFunctions": false,
                 "allowTypedFunctionExpressions": true,
                 "allowedNames": [],
               },
@@ -10736,6 +10749,10 @@ You must still type the parameters of the function.",
                     "allowHigherOrderFunctions": {
                       "description": "Whether to ignore return type annotations on functions immediately returning another function expression.
 You must still type the parameters of the function.",
+                      "type": "boolean",
+                    },
+                    "allowOverloadFunctions": {
+                      "description": "Whether to ignore return type annotations on functions with overload signatures.",
                       "type": "boolean",
                     },
                     "allowTypedFunctionExpressions": {
@@ -14248,7 +14265,7 @@ You must still type the parameters of the function.",
             "defaultOptions": [],
             "meta": {
               "docs": {
-                "description": "Disallow the use of \`eval()\`-like methods",
+                "description": "Disallow the use of \`eval()\`-like functions",
                 "extendsBaseRule": true,
                 "recommended": "recommended",
                 "requiresTypeChecking": true,
@@ -14679,7 +14696,9 @@ You must still type the parameters of the function.",
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/no-misused-spread",
               },
+              "hasSuggestions": true,
               "messages": {
+                "addAwait": "Add await operator.",
                 "noArraySpreadInObject": "Using the spread operator on an array in an object will result in a list of indices.",
                 "noClassDeclarationSpreadInObject": "Using the spread operator on class declarations will spread only their static properties, and will lose their class prototype.",
                 "noClassInstanceSpreadInObject": "Using the spread operator on class instances will lose their class prototype.",
@@ -14692,6 +14711,7 @@ You must still type the parameters of the function.",
 - .split("") produces UTF-16 code units, which breaks rich characters in many languages
 Consider using \`Intl.Segmenter\` for locale-aware string decomposition.
 Otherwise, if you don't need to preserve emojis or other non-Ascii characters, disable this lint rule on this line or configure the 'allow' rule option.",
+                "replaceMapSpreadInObject": "Replace map spread in object with \`Object.fromEntries()\`",
               },
               "schema": [
                 {
@@ -17787,17 +17807,17 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               },
               "hasSuggestions": true,
               "messages": {
-                "conditionErrorAny": "Unexpected any value in conditional. An explicit comparison or type conversion is required.",
-                "conditionErrorNullableBoolean": "Unexpected nullable boolean value in conditional. Please handle the nullish case explicitly.",
-                "conditionErrorNullableEnum": "Unexpected nullable enum value in conditional. Please handle the nullish/zero/NaN cases explicitly.",
-                "conditionErrorNullableNumber": "Unexpected nullable number value in conditional. Please handle the nullish/zero/NaN cases explicitly.",
-                "conditionErrorNullableObject": "Unexpected nullable object value in conditional. An explicit null check is required.",
-                "conditionErrorNullableString": "Unexpected nullable string value in conditional. Please handle the nullish/empty cases explicitly.",
+                "conditionErrorAny": "Unexpected any value in {{context}}. An explicit comparison or type conversion is required.",
+                "conditionErrorNullableBoolean": "Unexpected nullable boolean value in {{context}}. Please handle the nullish case explicitly.",
+                "conditionErrorNullableEnum": "Unexpected nullable enum value in {{context}}. Please handle the nullish/zero/NaN cases explicitly.",
+                "conditionErrorNullableNumber": "Unexpected nullable number value in {{context}}. Please handle the nullish/zero/NaN cases explicitly.",
+                "conditionErrorNullableObject": "Unexpected nullable object value in {{context}}. An explicit null check is required.",
+                "conditionErrorNullableString": "Unexpected nullable string value in {{context}}. Please handle the nullish/empty cases explicitly.",
                 "conditionErrorNullish": "Unexpected nullish value in conditional. The condition is always false.",
-                "conditionErrorNumber": "Unexpected number value in conditional. An explicit zero/NaN check is required.",
-                "conditionErrorObject": "Unexpected object value in conditional. The condition is always true.",
+                "conditionErrorNumber": "Unexpected number value in {{context}}. An explicit zero/NaN check is required.",
+                "conditionErrorObject": "Unexpected object value in {{context}}. The condition is always true.",
                 "conditionErrorOther": "Unexpected value in conditional. A boolean expression is required.",
-                "conditionErrorString": "Unexpected string value in conditional. An explicit empty string check is required.",
+                "conditionErrorString": "Unexpected string value in {{context}}. An explicit empty string check is required.",
                 "conditionFixCastBoolean": "Explicitly convert value to a boolean (\`Boolean(value)\`)",
                 "conditionFixCompareArrayLengthNonzero": "Change condition to check array's length (\`value.length > 0\`)",
                 "conditionFixCompareArrayLengthZero": "Change condition to check array's length (\`value.length === 0\`)",
@@ -17814,7 +17834,6 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "explicitBooleanReturnType": "Add an explicit \`boolean\` return type annotation.",
                 "noStrictNullCheck": "This rule requires the \`strictNullChecks\` compiler option to be turned on to function correctly.",
                 "predicateCannotBeAsync": "Predicate function should not be 'async'; expected a boolean return type.",
-                "predicateReturnsNonBoolean": "Predicate function should return a boolean.",
               },
               "schema": [
                 {
@@ -18070,6 +18089,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "defaultOptions": [
               {
                 "ignoreDifferentlyNamedParameters": false,
+                "ignoreOverloadsWithDifferentJSDoc": false,
               },
             ],
             "meta": {
@@ -18089,6 +18109,10 @@ If your function does not access \`this\`, you can annotate it with \`this: void
                   "properties": {
                     "ignoreDifferentlyNamedParameters": {
                       "description": "Whether two parameters with different names at the same index should be considered different even if their types are the same.",
+                      "type": "boolean",
+                    },
+                    "ignoreOverloadsWithDifferentJSDoc": {
+                      "description": "Whether two overloads with different JSDoc comments should be considered different even if their parameter and return types are the same.",
                       "type": "boolean",
                     },
                   },
