@@ -59,7 +59,7 @@
     "@stylistic/eslint-plugin": "4.2.0",
     "@typescript-eslint/parser": "8.26.1",
     "@vitest/eslint-plugin": "1.1.37",
-    "eslint-import-resolver-typescript": "3.9.1",
+    "eslint-import-resolver-typescript": "4.0.0",
     "eslint-plugin-import-x": "4.8.0",
     "eslint-plugin-jsdoc": "50.6.6",
     "eslint-plugin-n": "17.16.2",
@@ -69,7 +69,7 @@
   },
   "devDependencies": {
     "@2bad/tsconfig": "3.0.1",
-    "@2bad/tsfix": "0.1.0",
+    "@2bad/tsfix": "1.0.0",
     "@biomejs/biome": "1.9.4",
     "@swc/cli": "0.6.0",
     "@swc/core": "1.11.9",
