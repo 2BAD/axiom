@@ -6,7 +6,7 @@ exports[`strict > should include the js all config 1`] = `
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.26.0",
+        "version": "8.26.1",
       },
       "parseForESLint": [Function],
     },
@@ -768,7 +768,7 @@ exports[`strict > should include the js all config 1`] = `
       },
       "meta": {
         "name": "@typescript-eslint/eslint-plugin",
-        "version": "8.26.0",
+        "version": "8.26.1",
       },
       "rules": {
         "adjacent-overload-signatures": {
@@ -9116,7 +9116,7 @@ exports[`strict > should match the snapshot 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.26.0",
+          "version": "8.26.1",
         },
         "parseForESLint": [Function],
       },
@@ -9878,7 +9878,7 @@ exports[`strict > should match the snapshot 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.26.0",
+          "version": "8.26.1",
         },
         "rules": {
           "adjacent-overload-signatures": {
