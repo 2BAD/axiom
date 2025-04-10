@@ -1,15 +1,15 @@
 import tsParser from '@typescript-eslint/parser'
 import type { Linter } from 'eslint'
-import plugin from 'eslint-plugin-import-x'
+import { flatConfigs } from 'eslint-plugin-import-x'
 
 export const config: Linter.Config[] = [
   {
-    ...plugin.flatConfigs.recommended,
+    ...flatConfigs.recommended,
     name: 'eslint/plugin/import/recommended'
   } as Linter.Config,
   // @ts-expect-error this is unlikely to be fixed
   {
-    ...plugin.flatConfigs.typescript,
+    ...flatConfigs.typescript,
     name: 'eslint/plugin/import/typescript'
   },
   {

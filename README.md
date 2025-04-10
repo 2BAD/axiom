@@ -27,6 +27,28 @@ import { axiom } from '@2bad/axiom'
 export default axiom(import.meta.dirname)
 ```
 
+You can also customize which plugins to enable:
+
+```javascript
+import { axiom } from '@2bad/axiom'
+
+// Disable vitest and node plugins
+export default axiom(import.meta.dirname, {
+  vitest: false,
+  node: false
+})
+
+// Or enable only specific plugins
+export default axiom(import.meta.dirname, {
+  import: true,
+  jsdoc: false,
+  neostandard: false,
+  node: false,
+  promise: false,
+  vitest: false
+})
+```
+
 3. Add a lint script to your `package.json`:
 
 ```json
@@ -49,6 +71,7 @@ npm run lint
 - Zero configuration required
 - Comprehensive set of ESLint rules based on best practices
 - Automatic management of ESLint plugins
+- Customizable plugin selection
 - Simplified setup process
 - Consistent code style across projects
 
