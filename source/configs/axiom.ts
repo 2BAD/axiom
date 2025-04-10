@@ -10,7 +10,9 @@ export const axiom: Linter.Config[] = [
       '@typescript-eslint/no-floating-promises': 'error',
       // Reason: for..of works on any iterable
       // Reason: for..of supports all kinds of control flow in the loop body, like `continue`, `break`, `return`, `yield` and `await`.
-      '@typescript-eslint/prefer-for-of': 'error'
+      '@typescript-eslint/prefer-for-of': 'error',
+      // Reason: style differs from biome fixer
+      '@stylistic/multiline-ternary': 'off'
     }
   }
 ]
