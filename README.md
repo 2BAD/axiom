@@ -1,9 +1,15 @@
 # Axiom
-> Effortless TypeScript linting with zero configuration
 
-## Why "Axiom"?
+Effortless TypeScript linting with zero configuration
 
-In mathematics and logic, an axiom is a statement that is taken to be true without proof. Similarly, Axiom provides a set of linting rules that are considered best practices without the need for debate or configuration.
+## Features
+
+- Zero configuration required
+- Comprehensive set of ESLint rules based on best practices
+- Automatic management of ESLint plugins
+- Customizable plugin selection
+- Simplified setup process
+- Consistent code style across projects
 
 ## Overview
 
@@ -66,15 +72,6 @@ export default axiom(import.meta.dirname, {
 npm run lint
 ```
 
-## Features
-
-- Zero configuration required
-- Comprehensive set of ESLint rules based on best practices
-- Automatic management of ESLint plugins
-- Customizable plugin selection
-- Simplified setup process
-- Consistent code style across projects
-
 ## Why Axiom?
 
 Axiom aims to solve the following problems:
@@ -86,6 +83,10 @@ Axiom aims to solve the following problems:
 3. **Consistency**: By providing a standard set of rules, Axiom ensures consistency across projects and team members.
 
 4. **Focus on Code**: Spend less time configuring and more time coding. Axiom handles the linting details so you can focus on writing great JavaScript.
+
+## Why "Axiom"?
+
+In mathematics and logic, an axiom is a statement that is taken to be true without proof. Similarly, Axiom provides a set of linting rules that are considered best practices without the need for debate or configuration.
 
 ## Contributing
 
