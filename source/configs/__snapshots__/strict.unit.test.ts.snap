@@ -6,7 +6,7 @@ exports[`strict > should include the js all config 1`] = `
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.32.0",
+        "version": "8.32.1",
       },
       "parseForESLint": [Function],
     },
@@ -294,7 +294,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.0",
+                  "version": "8.32.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -500,7 +500,7 @@ exports[`strict > should include the js all config 1`] = `
             "parser": {
               "meta": {
                 "name": "typescript-eslint/parser",
-                "version": "8.32.0",
+                "version": "8.32.1",
               },
               "parseForESLint": [Function],
             },
@@ -622,7 +622,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.0",
+                  "version": "8.32.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -702,7 +702,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.0",
+                  "version": "8.32.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -809,7 +809,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.0",
+                  "version": "8.32.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -972,7 +972,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.0",
+                  "version": "8.32.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -1131,7 +1131,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.0",
+                  "version": "8.32.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -1253,7 +1253,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.0",
+                  "version": "8.32.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -1324,7 +1324,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.0",
+                  "version": "8.32.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -1404,7 +1404,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.0",
+                  "version": "8.32.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -1947,7 +1947,7 @@ exports[`strict > should include the js all config 1`] = `
       },
       "meta": {
         "name": "@typescript-eslint/eslint-plugin",
-        "version": "8.32.0",
+        "version": "8.32.1",
       },
       "rules": {
         "adjacent-overload-signatures": {
@@ -7863,7 +7863,6 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "requiresTypeChecking": true,
               "url": "https://typescript-eslint.io/rules/no-unnecessary-type-conversion",
             },
-            "fixable": "code",
             "hasSuggestions": true,
             "messages": {
               "suggestRemove": "Remove the type conversion.",
@@ -10414,7 +10413,7 @@ exports[`strict > should match the snapshot 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.32.0",
+          "version": "8.32.1",
         },
         "parseForESLint": [Function],
       },
@@ -10702,7 +10701,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.32.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -10908,7 +10907,7 @@ exports[`strict > should match the snapshot 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.0",
+                  "version": "8.32.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -11030,7 +11029,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.32.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11110,7 +11109,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.32.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11217,7 +11216,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.32.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11380,7 +11379,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.32.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11539,7 +11538,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.32.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11661,7 +11660,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.32.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11732,7 +11731,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.32.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11812,7 +11811,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.32.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -12355,7 +12354,7 @@ exports[`strict > should match the snapshot 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.32.0",
+          "version": "8.32.1",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -18271,7 +18270,6 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/no-unnecessary-type-conversion",
               },
-              "fixable": "code",
               "hasSuggestions": true,
               "messages": {
                 "suggestRemove": "Remove the type conversion.",
