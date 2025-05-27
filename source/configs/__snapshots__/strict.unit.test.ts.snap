@@ -6,7 +6,7 @@ exports[`strict > should include the js all config 1`] = `
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.32.1",
+        "version": "8.33.0",
       },
       "parseForESLint": [Function],
     },
@@ -143,7 +143,6 @@ exports[`strict > should include the js all config 1`] = `
             "@typescript-eslint/strict-boolean-expressions": "error",
             "@typescript-eslint/switch-exhaustiveness-check": "error",
             "@typescript-eslint/triple-slash-reference": "error",
-            "@typescript-eslint/typedef": "error",
             "@typescript-eslint/unbound-method": "error",
             "@typescript-eslint/unified-signatures": "error",
             "@typescript-eslint/use-unknown-in-catch-callback-variable": "error",
@@ -294,7 +293,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.1",
+                  "version": "8.33.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -463,7 +462,6 @@ exports[`strict > should include the js all config 1`] = `
               "@typescript-eslint/strict-boolean-expressions": "error",
               "@typescript-eslint/switch-exhaustiveness-check": "error",
               "@typescript-eslint/triple-slash-reference": "error",
-              "@typescript-eslint/typedef": "error",
               "@typescript-eslint/unbound-method": "error",
               "@typescript-eslint/unified-signatures": "error",
               "@typescript-eslint/use-unknown-in-catch-callback-variable": "error",
@@ -500,7 +498,7 @@ exports[`strict > should include the js all config 1`] = `
             "parser": {
               "meta": {
                 "name": "typescript-eslint/parser",
-                "version": "8.32.1",
+                "version": "8.33.0",
               },
               "parseForESLint": [Function],
             },
@@ -622,7 +620,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.1",
+                  "version": "8.33.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -702,7 +700,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.1",
+                  "version": "8.33.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -809,7 +807,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.1",
+                  "version": "8.33.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -972,7 +970,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.1",
+                  "version": "8.33.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -1131,7 +1129,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.1",
+                  "version": "8.33.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -1253,7 +1251,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.1",
+                  "version": "8.33.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -1324,7 +1322,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.1",
+                  "version": "8.33.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -1404,7 +1402,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.1",
+                  "version": "8.33.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -1947,7 +1945,7 @@ exports[`strict > should include the js all config 1`] = `
       },
       "meta": {
         "name": "@typescript-eslint/eslint-plugin",
-        "version": "8.32.1",
+        "version": "8.33.0",
       },
       "rules": {
         "adjacent-overload-signatures": {
@@ -10187,6 +10185,10 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
             },
           ],
           "meta": {
+            "deprecated": {
+              "deprecatedSince": "8.33.0",
+              "message": "This is an old rule that is no longer recommended for use.",
+            },
             "docs": {
               "description": "Require type annotations in certain places",
               "url": "https://typescript-eslint.io/rules/typedef",
@@ -10413,7 +10415,7 @@ exports[`strict > should match the snapshot 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.32.1",
+          "version": "8.33.0",
         },
         "parseForESLint": [Function],
       },
@@ -10550,7 +10552,6 @@ exports[`strict > should match the snapshot 1`] = `
               "@typescript-eslint/strict-boolean-expressions": "error",
               "@typescript-eslint/switch-exhaustiveness-check": "error",
               "@typescript-eslint/triple-slash-reference": "error",
-              "@typescript-eslint/typedef": "error",
               "@typescript-eslint/unbound-method": "error",
               "@typescript-eslint/unified-signatures": "error",
               "@typescript-eslint/use-unknown-in-catch-callback-variable": "error",
@@ -10701,7 +10702,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.1",
+                    "version": "8.33.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -10870,7 +10871,6 @@ exports[`strict > should match the snapshot 1`] = `
                 "@typescript-eslint/strict-boolean-expressions": "error",
                 "@typescript-eslint/switch-exhaustiveness-check": "error",
                 "@typescript-eslint/triple-slash-reference": "error",
-                "@typescript-eslint/typedef": "error",
                 "@typescript-eslint/unbound-method": "error",
                 "@typescript-eslint/unified-signatures": "error",
                 "@typescript-eslint/use-unknown-in-catch-callback-variable": "error",
@@ -10907,7 +10907,7 @@ exports[`strict > should match the snapshot 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.1",
+                  "version": "8.33.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -11029,7 +11029,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.1",
+                    "version": "8.33.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11109,7 +11109,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.1",
+                    "version": "8.33.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11216,7 +11216,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.1",
+                    "version": "8.33.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11379,7 +11379,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.1",
+                    "version": "8.33.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11538,7 +11538,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.1",
+                    "version": "8.33.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11660,7 +11660,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.1",
+                    "version": "8.33.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11731,7 +11731,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.1",
+                    "version": "8.33.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11811,7 +11811,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.1",
+                    "version": "8.33.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -12354,7 +12354,7 @@ exports[`strict > should match the snapshot 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.32.1",
+          "version": "8.33.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -20594,6 +20594,10 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               },
             ],
             "meta": {
+              "deprecated": {
+                "deprecatedSince": "8.33.0",
+                "message": "This is an old rule that is no longer recommended for use.",
+              },
               "docs": {
                 "description": "Require type annotations in certain places",
                 "url": "https://typescript-eslint.io/rules/typedef",
