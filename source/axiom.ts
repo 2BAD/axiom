@@ -4,7 +4,6 @@ import { resolve } from 'node:path'
 import { axiom as axiomRules } from './configs/axiom.ts'
 import { strict } from './configs/strict.ts'
 import { stylistic } from './configs/stylistic.ts'
-// biome-ignore lint/style/noNamespaceImport: acceptable for this case
 import * as plugins from './plugins/index.ts'
 
 type PluginName = 'import' | 'jsdoc' | 'neostandard' | 'node' | 'promise' | 'vitest'
@@ -92,8 +91,8 @@ const getEnabledPlugins = (options?: PluginOptions): Linter.Config[][] => {
 
   for (const pluginName of Object.keys(plugins) as PluginName[]) {
     if (options[pluginName] === true || !(pluginName in options)) {
-      // eslint-disable-next-line import-x/namespace
-      enabledPlugins.push(plugins[pluginName])
+      // biome-ignore lint/performance/noDynamicNamespaceImportAccess: acceptable for this case
+      enabledPlugins.push(plugins[pluginName]) // eslint-disable-line import-x/namespace
     }
   }
 
