@@ -6,7 +6,7 @@ exports[`strict > should include the js all config 1`] = `
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.35.1",
+        "version": "8.42.0",
       },
       "parseForESLint": [Function],
     },
@@ -293,7 +293,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.35.1",
+                  "version": "8.42.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -498,7 +498,7 @@ exports[`strict > should include the js all config 1`] = `
             "parser": {
               "meta": {
                 "name": "typescript-eslint/parser",
-                "version": "8.35.1",
+                "version": "8.42.0",
               },
               "parseForESLint": [Function],
             },
@@ -620,7 +620,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.35.1",
+                  "version": "8.42.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -700,7 +700,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.35.1",
+                  "version": "8.42.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -807,7 +807,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.35.1",
+                  "version": "8.42.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -970,7 +970,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.35.1",
+                  "version": "8.42.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -1059,6 +1059,7 @@ exports[`strict > should include the js all config 1`] = `
               "@typescript-eslint/no-unnecessary-type-arguments": "error",
               "@typescript-eslint/no-unnecessary-type-assertion": "error",
               "@typescript-eslint/no-unnecessary-type-constraint": "error",
+              "@typescript-eslint/no-unnecessary-type-conversion": "error",
               "@typescript-eslint/no-unnecessary-type-parameters": "error",
               "@typescript-eslint/no-unsafe-argument": "error",
               "@typescript-eslint/no-unsafe-assignment": "error",
@@ -1129,7 +1130,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.35.1",
+                  "version": "8.42.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -1196,6 +1197,7 @@ exports[`strict > should include the js all config 1`] = `
               "@typescript-eslint/no-unnecessary-template-expression": "error",
               "@typescript-eslint/no-unnecessary-type-arguments": "error",
               "@typescript-eslint/no-unnecessary-type-assertion": "error",
+              "@typescript-eslint/no-unnecessary-type-conversion": "error",
               "@typescript-eslint/no-unnecessary-type-parameters": "error",
               "@typescript-eslint/no-unsafe-argument": "error",
               "@typescript-eslint/no-unsafe-assignment": "error",
@@ -1251,7 +1253,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.35.1",
+                  "version": "8.42.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -1322,7 +1324,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.35.1",
+                  "version": "8.42.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -1402,7 +1404,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.35.1",
+                  "version": "8.42.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -1736,6 +1738,7 @@ exports[`strict > should include the js all config 1`] = `
             "@typescript-eslint/no-unnecessary-type-arguments": "error",
             "@typescript-eslint/no-unnecessary-type-assertion": "error",
             "@typescript-eslint/no-unnecessary-type-constraint": "error",
+            "@typescript-eslint/no-unnecessary-type-conversion": "error",
             "@typescript-eslint/no-unnecessary-type-parameters": "error",
             "@typescript-eslint/no-unsafe-argument": "error",
             "@typescript-eslint/no-unsafe-assignment": "error",
@@ -1824,6 +1827,7 @@ exports[`strict > should include the js all config 1`] = `
             "@typescript-eslint/no-unnecessary-template-expression": "error",
             "@typescript-eslint/no-unnecessary-type-arguments": "error",
             "@typescript-eslint/no-unnecessary-type-assertion": "error",
+            "@typescript-eslint/no-unnecessary-type-conversion": "error",
             "@typescript-eslint/no-unnecessary-type-parameters": "error",
             "@typescript-eslint/no-unsafe-argument": "error",
             "@typescript-eslint/no-unsafe-assignment": "error",
@@ -1945,7 +1949,7 @@ exports[`strict > should include the js all config 1`] = `
       },
       "meta": {
         "name": "@typescript-eslint/eslint-plugin",
-        "version": "8.35.1",
+        "version": "8.42.0",
       },
       "rules": {
         "adjacent-overload-signatures": {
@@ -2099,7 +2103,6 @@ exports[`strict > should include the js all config 1`] = `
                 "additionalProperties": false,
                 "properties": {
                   "minimumDescriptionLength": {
-                    "default": 3,
                     "description": "A minimum character length for descriptions when \`allow-with-description\` is enabled.",
                     "type": "number",
                   },
@@ -2195,7 +2198,6 @@ exports[`strict > should include the js all config 1`] = `
                 "additionalProperties": false,
                 "properties": {
                   "enforceForClassFields": {
-                    "default": true,
                     "description": "Enforces that functions used as instance field initializers utilize \`this\`.",
                     "type": "boolean",
                   },
@@ -2587,27 +2589,22 @@ exports[`strict > should include the js all config 1`] = `
                 "additionalProperties": false,
                 "properties": {
                   "allowIndexSignaturePropertyAccess": {
-                    "default": false,
                     "description": "Whether to allow accessing properties matching an index signature with array notation.",
                     "type": "boolean",
                   },
                   "allowKeywords": {
-                    "default": true,
                     "description": "Whether to allow keywords such as ["class"]\`.",
                     "type": "boolean",
                   },
                   "allowPattern": {
-                    "default": "",
                     "description": "Regular expression of names to allow.",
                     "type": "string",
                   },
                   "allowPrivateClassPropertyAccess": {
-                    "default": false,
                     "description": "Whether to allow accessing class members marked as \`private\` with array notation.",
                     "type": "boolean",
                   },
                   "allowProtectedClassPropertyAccess": {
-                    "default": false,
                     "description": "Whether to allow accessing class members marked as \`protected\` with array notation.",
                     "type": "boolean",
                   },
@@ -6667,7 +6664,6 @@ You must still type the parameters of the function.",
                 "additionalProperties": false,
                 "properties": {
                   "checkNever": {
-                    "default": false,
                     "description": "Whether to suggest removing \`void\` when the argument has type \`never\`.",
                     "type": "boolean",
                   },
@@ -7867,6 +7863,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
           "meta": {
             "docs": {
               "description": "Disallow conversion idioms when they do not change the type or value of the expression",
+              "recommended": "strict",
               "requiresTypeChecking": true,
               "url": "https://typescript-eslint.io/rules/no-unnecessary-type-conversion",
             },
@@ -7937,6 +7934,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "unsafeArrayPatternFromTuple": "Unsafe array destructuring of a tuple element with an {{sender}} value.",
               "unsafeArraySpread": "Unsafe spread of an {{sender}} value in an array.",
               "unsafeAssignment": "Unsafe assignment of type {{sender}} to a variable of type {{receiver}}.",
+              "unsafeObjectPattern": "Unsafe object destructuring of a property with an {{sender}} value.",
             },
             "schema": [],
             "type": "problem",
@@ -8737,6 +8735,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 ],
               },
               {
+                "additionalProperties": false,
                 "properties": {
                   "enforceForDeclarationWithTypeAnnotation": {
                     "description": "Whether to enforce destructuring on variable declarations with type annotations.",
@@ -8953,6 +8952,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                     "description": "Whether to ignore all (\`true\`) or some (an object with properties) primitive types.",
                     "oneOf": [
                       {
+                        "additionalProperties": false,
                         "description": "Which primitives types may be ignored.",
                         "properties": {
                           "bigint": {
@@ -10424,7 +10424,7 @@ exports[`strict > should match the snapshot 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.35.1",
+          "version": "8.42.0",
         },
         "parseForESLint": [Function],
       },
@@ -10711,7 +10711,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.35.1",
+                    "version": "8.42.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -10916,7 +10916,7 @@ exports[`strict > should match the snapshot 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.35.1",
+                  "version": "8.42.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -11038,7 +11038,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.35.1",
+                    "version": "8.42.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11118,7 +11118,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.35.1",
+                    "version": "8.42.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11225,7 +11225,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.35.1",
+                    "version": "8.42.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11388,7 +11388,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.35.1",
+                    "version": "8.42.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11477,6 +11477,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "@typescript-eslint/no-unnecessary-type-arguments": "error",
                 "@typescript-eslint/no-unnecessary-type-assertion": "error",
                 "@typescript-eslint/no-unnecessary-type-constraint": "error",
+                "@typescript-eslint/no-unnecessary-type-conversion": "error",
                 "@typescript-eslint/no-unnecessary-type-parameters": "error",
                 "@typescript-eslint/no-unsafe-argument": "error",
                 "@typescript-eslint/no-unsafe-assignment": "error",
@@ -11547,7 +11548,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.35.1",
+                    "version": "8.42.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11614,6 +11615,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "@typescript-eslint/no-unnecessary-template-expression": "error",
                 "@typescript-eslint/no-unnecessary-type-arguments": "error",
                 "@typescript-eslint/no-unnecessary-type-assertion": "error",
+                "@typescript-eslint/no-unnecessary-type-conversion": "error",
                 "@typescript-eslint/no-unnecessary-type-parameters": "error",
                 "@typescript-eslint/no-unsafe-argument": "error",
                 "@typescript-eslint/no-unsafe-assignment": "error",
@@ -11669,7 +11671,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.35.1",
+                    "version": "8.42.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11740,7 +11742,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.35.1",
+                    "version": "8.42.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11820,7 +11822,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.35.1",
+                    "version": "8.42.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -12154,6 +12156,7 @@ exports[`strict > should match the snapshot 1`] = `
               "@typescript-eslint/no-unnecessary-type-arguments": "error",
               "@typescript-eslint/no-unnecessary-type-assertion": "error",
               "@typescript-eslint/no-unnecessary-type-constraint": "error",
+              "@typescript-eslint/no-unnecessary-type-conversion": "error",
               "@typescript-eslint/no-unnecessary-type-parameters": "error",
               "@typescript-eslint/no-unsafe-argument": "error",
               "@typescript-eslint/no-unsafe-assignment": "error",
@@ -12242,6 +12245,7 @@ exports[`strict > should match the snapshot 1`] = `
               "@typescript-eslint/no-unnecessary-template-expression": "error",
               "@typescript-eslint/no-unnecessary-type-arguments": "error",
               "@typescript-eslint/no-unnecessary-type-assertion": "error",
+              "@typescript-eslint/no-unnecessary-type-conversion": "error",
               "@typescript-eslint/no-unnecessary-type-parameters": "error",
               "@typescript-eslint/no-unsafe-argument": "error",
               "@typescript-eslint/no-unsafe-assignment": "error",
@@ -12363,7 +12367,7 @@ exports[`strict > should match the snapshot 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.35.1",
+          "version": "8.42.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -12517,7 +12521,6 @@ exports[`strict > should match the snapshot 1`] = `
                   "additionalProperties": false,
                   "properties": {
                     "minimumDescriptionLength": {
-                      "default": 3,
                       "description": "A minimum character length for descriptions when \`allow-with-description\` is enabled.",
                       "type": "number",
                     },
@@ -12613,7 +12616,6 @@ exports[`strict > should match the snapshot 1`] = `
                   "additionalProperties": false,
                   "properties": {
                     "enforceForClassFields": {
-                      "default": true,
                       "description": "Enforces that functions used as instance field initializers utilize \`this\`.",
                       "type": "boolean",
                     },
@@ -13005,27 +13007,22 @@ exports[`strict > should match the snapshot 1`] = `
                   "additionalProperties": false,
                   "properties": {
                     "allowIndexSignaturePropertyAccess": {
-                      "default": false,
                       "description": "Whether to allow accessing properties matching an index signature with array notation.",
                       "type": "boolean",
                     },
                     "allowKeywords": {
-                      "default": true,
                       "description": "Whether to allow keywords such as ["class"]\`.",
                       "type": "boolean",
                     },
                     "allowPattern": {
-                      "default": "",
                       "description": "Regular expression of names to allow.",
                       "type": "string",
                     },
                     "allowPrivateClassPropertyAccess": {
-                      "default": false,
                       "description": "Whether to allow accessing class members marked as \`private\` with array notation.",
                       "type": "boolean",
                     },
                     "allowProtectedClassPropertyAccess": {
-                      "default": false,
                       "description": "Whether to allow accessing class members marked as \`protected\` with array notation.",
                       "type": "boolean",
                     },
@@ -17085,7 +17082,6 @@ You must still type the parameters of the function.",
                   "additionalProperties": false,
                   "properties": {
                     "checkNever": {
-                      "default": false,
                       "description": "Whether to suggest removing \`void\` when the argument has type \`never\`.",
                       "type": "boolean",
                     },
@@ -18285,6 +18281,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
             "meta": {
               "docs": {
                 "description": "Disallow conversion idioms when they do not change the type or value of the expression",
+                "recommended": "strict",
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/no-unnecessary-type-conversion",
               },
@@ -18355,6 +18352,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "unsafeArrayPatternFromTuple": "Unsafe array destructuring of a tuple element with an {{sender}} value.",
                 "unsafeArraySpread": "Unsafe spread of an {{sender}} value in an array.",
                 "unsafeAssignment": "Unsafe assignment of type {{sender}} to a variable of type {{receiver}}.",
+                "unsafeObjectPattern": "Unsafe object destructuring of a property with an {{sender}} value.",
               },
               "schema": [],
               "type": "problem",
@@ -19155,6 +19153,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                   ],
                 },
                 {
+                  "additionalProperties": false,
                   "properties": {
                     "enforceForDeclarationWithTypeAnnotation": {
                       "description": "Whether to enforce destructuring on variable declarations with type annotations.",
@@ -19371,6 +19370,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                       "description": "Whether to ignore all (\`true\`) or some (an object with properties) primitive types.",
                       "oneOf": [
                         {
+                          "additionalProperties": false,
                           "description": "Which primitives types may be ignored.",
                           "properties": {
                             "bigint": {
