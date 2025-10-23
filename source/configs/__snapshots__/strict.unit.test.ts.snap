@@ -5817,8 +5817,9 @@ You must still type the parameters of the function.",
               "recommended": "stylistic",
               "url": "https://typescript-eslint.io/rules/no-empty-function",
             },
-            "hasSuggestions": undefined,
+            "hasSuggestions": true,
             "messages": {
+              "suggestComment": "Add comment inside empty {{name}}.",
               "unexpected": "Unexpected empty {{name}}.",
             },
             "schema": [
@@ -16283,8 +16284,9 @@ You must still type the parameters of the function.",
                 "recommended": "stylistic",
                 "url": "https://typescript-eslint.io/rules/no-empty-function",
               },
-              "hasSuggestions": undefined,
+              "hasSuggestions": true,
               "messages": {
+                "suggestComment": "Add comment inside empty {{name}}.",
                 "unexpected": "Unexpected empty {{name}}.",
               },
               "schema": [
