@@ -6,7 +6,7 @@ exports[`strict > should include the js all config 1`] = `
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.42.0",
+        "version": "8.46.2",
       },
       "parseForESLint": [Function],
     },
@@ -293,7 +293,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.42.0",
+                  "version": "8.46.2",
                 },
                 "parseForESLint": [Function],
               },
@@ -498,7 +498,7 @@ exports[`strict > should include the js all config 1`] = `
             "parser": {
               "meta": {
                 "name": "typescript-eslint/parser",
-                "version": "8.42.0",
+                "version": "8.46.2",
               },
               "parseForESLint": [Function],
             },
@@ -620,7 +620,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.42.0",
+                  "version": "8.46.2",
                 },
                 "parseForESLint": [Function],
               },
@@ -700,7 +700,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.42.0",
+                  "version": "8.46.2",
                 },
                 "parseForESLint": [Function],
               },
@@ -807,7 +807,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.42.0",
+                  "version": "8.46.2",
                 },
                 "parseForESLint": [Function],
               },
@@ -970,7 +970,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.42.0",
+                  "version": "8.46.2",
                 },
                 "parseForESLint": [Function],
               },
@@ -1130,7 +1130,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.42.0",
+                  "version": "8.46.2",
                 },
                 "parseForESLint": [Function],
               },
@@ -1253,7 +1253,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.42.0",
+                  "version": "8.46.2",
                 },
                 "parseForESLint": [Function],
               },
@@ -1324,7 +1324,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.42.0",
+                  "version": "8.46.2",
                 },
                 "parseForESLint": [Function],
               },
@@ -1404,7 +1404,7 @@ exports[`strict > should include the js all config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.42.0",
+                  "version": "8.46.2",
                 },
                 "parseForESLint": [Function],
               },
@@ -1949,7 +1949,7 @@ exports[`strict > should include the js all config 1`] = `
       },
       "meta": {
         "name": "@typescript-eslint/eslint-plugin",
-        "version": "8.42.0",
+        "version": "8.46.2",
       },
       "rules": {
         "adjacent-overload-signatures": {
@@ -2035,6 +2035,7 @@ exports[`strict > should include the js all config 1`] = `
               "awaitUsingOfNonAsyncDisposable": "Unexpected \`await using\` of a value that is not async disposable.",
               "convertToOrdinaryFor": "Convert to an ordinary \`for...of\` loop.",
               "forAwaitOfNonAsyncIterable": "Unexpected \`for await...of\` of a value that is not async iterable.",
+              "invalidPromiseAggregatorInput": "Unexpected iterable of non-Promise (non-"Thenable") values passed to promise aggregator.",
               "removeAwait": "Remove unnecessary \`await\`.",
             },
             "schema": [],
@@ -2108,15 +2109,19 @@ exports[`strict > should include the js all config 1`] = `
                   },
                   "ts-check": {
                     "$ref": "#/items/0/$defs/directiveConfigSchema",
+                    "description": "Whether allow ts-check directives, and with which restrictions.",
                   },
                   "ts-expect-error": {
                     "$ref": "#/items/0/$defs/directiveConfigSchema",
+                    "description": "Whether and when expect-error directives, and with which restrictions.",
                   },
                   "ts-ignore": {
                     "$ref": "#/items/0/$defs/directiveConfigSchema",
+                    "description": "Whether allow ts-ignore directives, and with which restrictions.",
                   },
                   "ts-nocheck": {
                     "$ref": "#/items/0/$defs/directiveConfigSchema",
+                    "description": "Whether allow ts-nocheck directives, and with which restrictions.",
                   },
                 },
                 "type": "object",
@@ -2541,6 +2546,7 @@ exports[`strict > should include the js all config 1`] = `
             "docs": {
               "description": "Enforce default parameters to be last",
               "extendsBaseRule": true,
+              "frozen": true,
               "url": "https://typescript-eslint.io/rules/default-param-last",
             },
             "messages": {
@@ -2574,6 +2580,7 @@ exports[`strict > should include the js all config 1`] = `
             "docs": {
               "description": "Enforce dot notation whenever possible",
               "extendsBaseRule": true,
+              "frozen": true,
               "recommended": "stylistic",
               "requiresTypeChecking": true,
               "url": "https://typescript-eslint.io/rules/dot-notation",
@@ -2750,18 +2757,23 @@ exports[`strict > should include the js all config 1`] = `
                     "properties": {
                       "accessors": {
                         "$ref": "#/items/0/$defs/accessibilityLevel",
+                        "description": "Which member accessibility modifier requirements to apply for accessors.",
                       },
                       "constructors": {
                         "$ref": "#/items/0/$defs/accessibilityLevel",
+                        "description": "Which member accessibility modifier requirements to apply for constructors.",
                       },
                       "methods": {
                         "$ref": "#/items/0/$defs/accessibilityLevel",
+                        "description": "Which member accessibility modifier requirements to apply for methods.",
                       },
                       "parameterProperties": {
                         "$ref": "#/items/0/$defs/accessibilityLevel",
+                        "description": "Which member accessibility modifier requirements to apply for parameterProperties.",
                       },
                       "properties": {
                         "$ref": "#/items/0/$defs/accessibilityLevel",
+                        "description": "Which member accessibility modifier requirements to apply for properties.",
                       },
                     },
                     "type": "object",
@@ -2846,6 +2858,7 @@ You must still type the parameters of the function.",
             "docs": {
               "description": "Require or disallow initialization in variable declarations",
               "extendsBaseRule": true,
+              "frozen": true,
               "url": "https://typescript-eslint.io/rules/init-declarations",
             },
             "hasSuggestions": undefined,
@@ -3065,6 +3078,7 @@ You must still type the parameters of the function.",
           "meta": {
             "docs": {
               "description": "Require a consistent member declaration order",
+              "frozen": true,
               "url": "https://typescript-eslint.io/rules/member-ordering",
             },
             "messages": {
@@ -3394,18 +3408,23 @@ You must still type the parameters of the function.",
                 "properties": {
                   "classExpressions": {
                     "$ref": "#/items/0/$defs/baseConfig",
+                    "description": "Which ordering to enforce for classExpressions.",
                   },
                   "classes": {
                     "$ref": "#/items/0/$defs/baseConfig",
+                    "description": "Which ordering to enforce for classes.",
                   },
                   "default": {
                     "$ref": "#/items/0/$defs/baseConfig",
+                    "description": "Which ordering to enforce for default.",
                   },
                   "interfaces": {
                     "$ref": "#/items/0/$defs/typesConfig",
+                    "description": "Which ordering to enforce for interfaces.",
                   },
                   "typeLiterals": {
                     "$ref": "#/items/0/$defs/typesConfig",
+                    "description": "Which ordering to enforce for typeLiterals.",
                   },
                 },
                 "type": "object",
@@ -3431,6 +3450,7 @@ You must still type the parameters of the function.",
             },
             "schema": [
               {
+                "description": "The method signature style to enforce using.",
                 "enum": [
                   "property",
                   "method",
@@ -3478,6 +3498,7 @@ You must still type the parameters of the function.",
           "meta": {
             "docs": {
               "description": "Enforce naming conventions for everything across a codebase",
+              "frozen": true,
               "requiresTypeChecking": true,
               "url": "https://typescript-eslint.io/rules/naming-convention",
             },
@@ -5460,7 +5481,7 @@ You must still type the parameters of the function.",
                     "type": "boolean",
                   },
                   "ignoredTypeNames": {
-                    "description": "Stringified regular expressions of type names to ignore.",
+                    "description": "Stringified type names to ignore.",
                     "items": {
                       "type": "string",
                     },
@@ -6567,6 +6588,7 @@ You must still type the parameters of the function.",
             "docs": {
               "description": "Disallow magic numbers",
               "extendsBaseRule": true,
+              "frozen": true,
               "url": "https://typescript-eslint.io/rules/no-magic-numbers",
             },
             "messages": {
@@ -7705,9 +7727,11 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
                     "description": "Whether to ignore constant loop conditions, such as \`while (true)\`.",
                     "oneOf": [
                       {
+                        "description": "Always ignore or not ignore the loop conditions",
                         "type": "boolean",
                       },
                       {
+                        "description": "Which situations to ignore constant conditions in.",
                         "enum": [
                           "always",
                           "never",
@@ -8017,7 +8041,11 @@ Prefer explicitly defining any function parameters and return type.",
         },
         "no-unsafe-member-access": {
           "create": [Function],
-          "defaultOptions": [],
+          "defaultOptions": [
+            {
+              "allowOptionalChaining": false,
+            },
+          ],
           "meta": {
             "docs": {
               "description": "Disallow member access on a value with type \`any\`",
@@ -8031,7 +8059,18 @@ Prefer explicitly defining any function parameters and return type.",
               "unsafeThisMemberExpression": "Unsafe member access {{property}} on an \`any\` value. \`this\` is typed as \`any\`.
 You can try to fix this by turning on the \`noImplicitThis\` compiler option, or adding a \`this\` parameter to the function.",
             },
-            "schema": [],
+            "schema": [
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "allowOptionalChaining": {
+                    "description": "Whether to allow \`?.\` optional chains on \`any\` values.",
+                    "type": "boolean",
+                  },
+                },
+                "type": "object",
+              },
+            ],
             "type": "problem",
           },
         },
@@ -8166,6 +8205,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               {
                 "oneOf": [
                   {
+                    "description": "Broad setting for unused variables to target.",
                     "enum": [
                       "all",
                       "local",
@@ -8210,6 +8250,10 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                       },
                       "ignoreRestSiblings": {
                         "description": "Whether to ignore sibling properties in \`...\` destructurings.",
+                        "type": "boolean",
+                      },
+                      "ignoreUsingDeclarations": {
+                        "description": "Whether to ignore using or await using declarations.",
                         "type": "boolean",
                       },
                       "reportUsedIgnorePattern": {
@@ -8263,6 +8307,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               {
                 "oneOf": [
                   {
+                    "description": "Broadly set functions and allowNamedExports to false.",
                     "enum": [
                       "nofunc",
                     ],
@@ -8679,6 +8724,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
             "docs": {
               "description": "Require destructuring from arrays and/or objects",
               "extendsBaseRule": true,
+              "frozen": true,
               "requiresTypeChecking": true,
               "url": "https://typescript-eslint.io/rules/prefer-destructuring",
             },
@@ -10264,9 +10310,11 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "url": "https://typescript-eslint.io/rules/unbound-method",
             },
             "messages": {
-              "unbound": "Avoid referencing unbound methods which may cause unintentional scoping of \`this\`.",
-              "unboundWithoutThisAnnotation": "Avoid referencing unbound methods which may cause unintentional scoping of \`this\`.
-If your function does not access \`this\`, you can annotate it with \`this: void\`, or consider using an arrow function instead.",
+              "unbound": "A method that is not declared with \`this: void\` may cause unintentional scoping of \`this\` when separated from its object.
+Consider using an arrow function or explicitly \`.bind()\`ing the method to avoid calling the method with an unintended \`this\` value. ",
+              "unboundWithoutThisAnnotation": "A method that is not declared with \`this: void\` may cause unintentional scoping of \`this\` when separated from its object.
+Consider using an arrow function or explicitly \`.bind()\`ing the method to avoid calling the method with an unintended \`this\` value. 
+If a function does not access \`this\`, it can be annotated with \`this: void\`.",
             },
             "schema": [
               {
@@ -10424,7 +10472,7 @@ exports[`strict > should match the snapshot 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.42.0",
+          "version": "8.46.2",
         },
         "parseForESLint": [Function],
       },
@@ -10711,7 +10759,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.46.2",
                   },
                   "parseForESLint": [Function],
                 },
@@ -10916,7 +10964,7 @@ exports[`strict > should match the snapshot 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.42.0",
+                  "version": "8.46.2",
                 },
                 "parseForESLint": [Function],
               },
@@ -11038,7 +11086,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.46.2",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11118,7 +11166,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.46.2",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11225,7 +11273,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.46.2",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11388,7 +11436,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.46.2",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11548,7 +11596,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.46.2",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11671,7 +11719,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.46.2",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11742,7 +11790,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.46.2",
                   },
                   "parseForESLint": [Function],
                 },
@@ -11822,7 +11870,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.46.2",
                   },
                   "parseForESLint": [Function],
                 },
@@ -12367,7 +12415,7 @@ exports[`strict > should match the snapshot 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.42.0",
+          "version": "8.46.2",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -12453,6 +12501,7 @@ exports[`strict > should match the snapshot 1`] = `
                 "awaitUsingOfNonAsyncDisposable": "Unexpected \`await using\` of a value that is not async disposable.",
                 "convertToOrdinaryFor": "Convert to an ordinary \`for...of\` loop.",
                 "forAwaitOfNonAsyncIterable": "Unexpected \`for await...of\` of a value that is not async iterable.",
+                "invalidPromiseAggregatorInput": "Unexpected iterable of non-Promise (non-"Thenable") values passed to promise aggregator.",
                 "removeAwait": "Remove unnecessary \`await\`.",
               },
               "schema": [],
@@ -12526,15 +12575,19 @@ exports[`strict > should match the snapshot 1`] = `
                     },
                     "ts-check": {
                       "$ref": "#/items/0/$defs/directiveConfigSchema",
+                      "description": "Whether allow ts-check directives, and with which restrictions.",
                     },
                     "ts-expect-error": {
                       "$ref": "#/items/0/$defs/directiveConfigSchema",
+                      "description": "Whether and when expect-error directives, and with which restrictions.",
                     },
                     "ts-ignore": {
                       "$ref": "#/items/0/$defs/directiveConfigSchema",
+                      "description": "Whether allow ts-ignore directives, and with which restrictions.",
                     },
                     "ts-nocheck": {
                       "$ref": "#/items/0/$defs/directiveConfigSchema",
+                      "description": "Whether allow ts-nocheck directives, and with which restrictions.",
                     },
                   },
                   "type": "object",
@@ -12959,6 +13012,7 @@ exports[`strict > should match the snapshot 1`] = `
               "docs": {
                 "description": "Enforce default parameters to be last",
                 "extendsBaseRule": true,
+                "frozen": true,
                 "url": "https://typescript-eslint.io/rules/default-param-last",
               },
               "messages": {
@@ -12992,6 +13046,7 @@ exports[`strict > should match the snapshot 1`] = `
               "docs": {
                 "description": "Enforce dot notation whenever possible",
                 "extendsBaseRule": true,
+                "frozen": true,
                 "recommended": "stylistic",
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/dot-notation",
@@ -13168,18 +13223,23 @@ exports[`strict > should match the snapshot 1`] = `
                       "properties": {
                         "accessors": {
                           "$ref": "#/items/0/$defs/accessibilityLevel",
+                          "description": "Which member accessibility modifier requirements to apply for accessors.",
                         },
                         "constructors": {
                           "$ref": "#/items/0/$defs/accessibilityLevel",
+                          "description": "Which member accessibility modifier requirements to apply for constructors.",
                         },
                         "methods": {
                           "$ref": "#/items/0/$defs/accessibilityLevel",
+                          "description": "Which member accessibility modifier requirements to apply for methods.",
                         },
                         "parameterProperties": {
                           "$ref": "#/items/0/$defs/accessibilityLevel",
+                          "description": "Which member accessibility modifier requirements to apply for parameterProperties.",
                         },
                         "properties": {
                           "$ref": "#/items/0/$defs/accessibilityLevel",
+                          "description": "Which member accessibility modifier requirements to apply for properties.",
                         },
                       },
                       "type": "object",
@@ -13264,6 +13324,7 @@ You must still type the parameters of the function.",
               "docs": {
                 "description": "Require or disallow initialization in variable declarations",
                 "extendsBaseRule": true,
+                "frozen": true,
                 "url": "https://typescript-eslint.io/rules/init-declarations",
               },
               "hasSuggestions": undefined,
@@ -13483,6 +13544,7 @@ You must still type the parameters of the function.",
             "meta": {
               "docs": {
                 "description": "Require a consistent member declaration order",
+                "frozen": true,
                 "url": "https://typescript-eslint.io/rules/member-ordering",
               },
               "messages": {
@@ -13812,18 +13874,23 @@ You must still type the parameters of the function.",
                   "properties": {
                     "classExpressions": {
                       "$ref": "#/items/0/$defs/baseConfig",
+                      "description": "Which ordering to enforce for classExpressions.",
                     },
                     "classes": {
                       "$ref": "#/items/0/$defs/baseConfig",
+                      "description": "Which ordering to enforce for classes.",
                     },
                     "default": {
                       "$ref": "#/items/0/$defs/baseConfig",
+                      "description": "Which ordering to enforce for default.",
                     },
                     "interfaces": {
                       "$ref": "#/items/0/$defs/typesConfig",
+                      "description": "Which ordering to enforce for interfaces.",
                     },
                     "typeLiterals": {
                       "$ref": "#/items/0/$defs/typesConfig",
+                      "description": "Which ordering to enforce for typeLiterals.",
                     },
                   },
                   "type": "object",
@@ -13849,6 +13916,7 @@ You must still type the parameters of the function.",
               },
               "schema": [
                 {
+                  "description": "The method signature style to enforce using.",
                   "enum": [
                     "property",
                     "method",
@@ -13896,6 +13964,7 @@ You must still type the parameters of the function.",
             "meta": {
               "docs": {
                 "description": "Enforce naming conventions for everything across a codebase",
+                "frozen": true,
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/naming-convention",
               },
@@ -15878,7 +15947,7 @@ You must still type the parameters of the function.",
                       "type": "boolean",
                     },
                     "ignoredTypeNames": {
-                      "description": "Stringified regular expressions of type names to ignore.",
+                      "description": "Stringified type names to ignore.",
                       "items": {
                         "type": "string",
                       },
@@ -16985,6 +17054,7 @@ You must still type the parameters of the function.",
               "docs": {
                 "description": "Disallow magic numbers",
                 "extendsBaseRule": true,
+                "frozen": true,
                 "url": "https://typescript-eslint.io/rules/no-magic-numbers",
               },
               "messages": {
@@ -18123,9 +18193,11 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
                       "description": "Whether to ignore constant loop conditions, such as \`while (true)\`.",
                       "oneOf": [
                         {
+                          "description": "Always ignore or not ignore the loop conditions",
                           "type": "boolean",
                         },
                         {
+                          "description": "Which situations to ignore constant conditions in.",
                           "enum": [
                             "always",
                             "never",
@@ -18435,7 +18507,11 @@ Prefer explicitly defining any function parameters and return type.",
           },
           "no-unsafe-member-access": {
             "create": [Function],
-            "defaultOptions": [],
+            "defaultOptions": [
+              {
+                "allowOptionalChaining": false,
+              },
+            ],
             "meta": {
               "docs": {
                 "description": "Disallow member access on a value with type \`any\`",
@@ -18449,7 +18525,18 @@ Prefer explicitly defining any function parameters and return type.",
                 "unsafeThisMemberExpression": "Unsafe member access {{property}} on an \`any\` value. \`this\` is typed as \`any\`.
 You can try to fix this by turning on the \`noImplicitThis\` compiler option, or adding a \`this\` parameter to the function.",
               },
-              "schema": [],
+              "schema": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "allowOptionalChaining": {
+                      "description": "Whether to allow \`?.\` optional chains on \`any\` values.",
+                      "type": "boolean",
+                    },
+                  },
+                  "type": "object",
+                },
+              ],
               "type": "problem",
             },
           },
@@ -18584,6 +18671,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 {
                   "oneOf": [
                     {
+                      "description": "Broad setting for unused variables to target.",
                       "enum": [
                         "all",
                         "local",
@@ -18628,6 +18716,10 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                         },
                         "ignoreRestSiblings": {
                           "description": "Whether to ignore sibling properties in \`...\` destructurings.",
+                          "type": "boolean",
+                        },
+                        "ignoreUsingDeclarations": {
+                          "description": "Whether to ignore using or await using declarations.",
                           "type": "boolean",
                         },
                         "reportUsedIgnorePattern": {
@@ -18681,6 +18773,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 {
                   "oneOf": [
                     {
+                      "description": "Broadly set functions and allowNamedExports to false.",
                       "enum": [
                         "nofunc",
                       ],
@@ -19097,6 +19190,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "docs": {
                 "description": "Require destructuring from arrays and/or objects",
                 "extendsBaseRule": true,
+                "frozen": true,
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/prefer-destructuring",
               },
@@ -20682,9 +20776,11 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "url": "https://typescript-eslint.io/rules/unbound-method",
               },
               "messages": {
-                "unbound": "Avoid referencing unbound methods which may cause unintentional scoping of \`this\`.",
-                "unboundWithoutThisAnnotation": "Avoid referencing unbound methods which may cause unintentional scoping of \`this\`.
-If your function does not access \`this\`, you can annotate it with \`this: void\`, or consider using an arrow function instead.",
+                "unbound": "A method that is not declared with \`this: void\` may cause unintentional scoping of \`this\` when separated from its object.
+Consider using an arrow function or explicitly \`.bind()\`ing the method to avoid calling the method with an unintended \`this\` value. ",
+                "unboundWithoutThisAnnotation": "A method that is not declared with \`this: void\` may cause unintentional scoping of \`this\` when separated from its object.
+Consider using an arrow function or explicitly \`.bind()\`ing the method to avoid calling the method with an unintended \`this\` value. 
+If a function does not access \`this\`, it can be annotated with \`this: void\`.",
               },
               "schema": [
                 {
