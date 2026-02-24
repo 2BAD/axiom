@@ -1,11 +1,203 @@
-import type { ESLint } from 'eslint'
-import { strict } from './configs/strict.ts'
-import { stylistic } from './configs/stylistic.ts'
+export const axiom = {
+  plugins: ['eslint', 'typescript', 'oxc', 'import', 'jsdoc', 'promise', 'node', 'vitest'],
 
-// biome-ignore lint/performance/noBarrelFile: acceptable for this case
-export { axiom } from './axiom.ts'
+  rules: {
+    // ── ESLint core (60 rules) ──────────────────────────────────────────
+    // biome-ignore lint/style/useNamingConvention: oxlint rule option name
+    'eslint/accessor-pairs': ['error', { enforceForTSTypes: false, enforceForClassMembers: true, setWithoutGet: true }],
+    'eslint/array-callback-return': ['error', { allowImplicit: false, checkForEach: false }],
+    'eslint/curly': ['error', 'multi-line'],
+    'eslint/default-case-last': 'error',
+    'eslint/eqeqeq': ['error', 'always', { null: 'ignore' }],
+    'eslint/for-direction': 'error',
+    'eslint/new-cap': ['error', { capIsNew: false, newIsCap: true }],
+    'eslint/no-array-constructor': 'error',
+    'eslint/no-async-promise-executor': 'error',
+    'eslint/no-caller': 'error',
+    'eslint/no-case-declarations': 'error',
+    'eslint/no-class-assign': 'error',
+    'eslint/no-compare-neg-zero': 'error',
+    'eslint/no-cond-assign': ['error', 'except-parens'],
+    'eslint/no-constant-binary-expression': 'error',
+    'eslint/no-constant-condition': ['error', { checkLoops: false }],
+    'eslint/no-control-regex': 'error',
+    'eslint/no-debugger': 'error',
+    'eslint/no-delete-var': 'error',
+    'eslint/no-dupe-class-members': 'error',
+    'eslint/no-dupe-else-if': 'error',
+    'eslint/no-duplicate-case': 'error',
+    'eslint/no-empty': ['error', { allowEmptyCatch: true }],
+    'eslint/no-empty-character-class': 'error',
+    'eslint/no-empty-pattern': 'error',
+    'eslint/no-empty-static-block': 'error',
+    'eslint/no-eval': 'error',
+    'eslint/no-ex-assign': 'error',
+    'eslint/no-extend-native': 'error',
+    'eslint/no-extra-bind': 'error',
+    'eslint/no-extra-boolean-cast': 'error',
+    'eslint/no-fallthrough': 'error',
+    'eslint/no-global-assign': 'error',
+    'eslint/no-implied-eval': 'error',
+    'eslint/no-invalid-regexp': 'error',
+    'eslint/no-irregular-whitespace': 'error',
+    'eslint/no-iterator': 'error',
+    'eslint/no-labels': 'error',
+    'eslint/no-lone-blocks': 'error',
+    'eslint/no-loss-of-precision': 'error',
+    'eslint/no-misleading-character-class': 'error',
+    'eslint/no-multi-str': 'error',
+    'eslint/no-new': 'error',
+    'eslint/no-new-func': 'error',
+    'eslint/no-new-wrappers': 'error',
+    'eslint/no-nonoctal-decimal-escape': 'error',
+    'eslint/no-object-constructor': 'error',
+    'eslint/no-proto': 'error',
+    'eslint/no-prototype-builtins': 'error',
+    'eslint/no-redeclare': ['error', { builtinGlobals: false }],
+    'eslint/no-regex-spaces': 'error',
+    'eslint/no-return-assign': ['error', 'except-parens'],
+    'eslint/no-self-assign': 'error',
+    'eslint/no-self-compare': 'error',
+    'eslint/no-sequences': 'error',
+    'eslint/no-shadow-restricted-names': 'error',
+    'eslint/no-sparse-arrays': 'error',
+    'eslint/no-template-curly-in-string': 'error',
+    'eslint/no-throw-literal': 'error',
+    'eslint/no-unexpected-multiline': 'error',
+    'eslint/no-unmodified-loop-condition': 'error',
+    'eslint/no-unneeded-ternary': ['error', { defaultAssignment: false }],
+    'eslint/no-unreachable': 'error',
+    'eslint/no-unsafe-finally': 'error',
+    'eslint/no-unsafe-optional-chaining': 'error',
+    'eslint/no-unused-expressions': [
+      'error',
+      { allowShortCircuit: true, allowTaggedTemplates: true, allowTernary: true }
+    ],
+    'eslint/no-unused-labels': 'error',
+    'eslint/no-unused-private-class-members': 'error',
+    'eslint/no-unused-vars': ['error', { args: 'none', caughtErrors: 'none', ignoreRestSiblings: true }],
+    'eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: false }],
+    'eslint/no-useless-backreference': 'error',
+    'eslint/no-useless-call': 'error',
+    'eslint/no-useless-catch': 'error',
+    'eslint/no-useless-computed-key': ['error', { enforceForClassMembers: true }],
+    'eslint/no-useless-constructor': 'error',
+    'eslint/no-useless-escape': 'error',
+    'eslint/no-useless-rename': 'error',
+    'eslint/no-useless-return': 'error',
+    'eslint/no-var': 'warn',
+    'eslint/no-void': ['error', { allowAsStatement: true }],
+    'eslint/no-with': 'error',
+    'eslint/prefer-const': ['error', { destructuring: 'all' }],
+    'eslint/prefer-promise-reject-errors': 'error',
+    'eslint/prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
+    'eslint/prefer-rest-params': 'error',
+    'eslint/prefer-spread': 'error',
+    'eslint/require-yield': 'error',
+    'eslint/symbol-description': 'error',
+    'eslint/unicode-bom': ['error', 'never'],
+    'eslint/use-isnan': ['error', { enforceForIndexOf: true, enforceForSwitchCase: true }],
+    'eslint/valid-typeof': ['error', { requireStringLiterals: true }],
+    'eslint/yoda': ['error', 'never'],
 
-export const configs = {
-  strict,
-  stylistic
-} satisfies ESLint.Plugin['configs']
+    // ── TypeScript (24 rules) ───────────────────────────────────────────
+    'typescript/ban-ts-comment': ['error', { minimumDescriptionLength: 10 }],
+    'typescript/no-dynamic-delete': 'error',
+    'typescript/no-empty-object-type': 'error',
+    'typescript/no-explicit-any': 'error',
+    'typescript/no-extra-non-null-assertion': 'error',
+    'typescript/no-extraneous-class': 'error',
+    'typescript/no-floating-promises': 'error',
+    'typescript/no-invalid-void-type': 'error',
+    'typescript/no-misused-new': 'error',
+    'typescript/no-namespace': 'error',
+    'typescript/no-non-null-asserted-nullish-coalescing': 'error',
+    'typescript/no-require-imports': 'error',
+    'typescript/no-this-alias': 'error',
+    'typescript/no-unnecessary-type-constraint': 'error',
+    'typescript/no-unsafe-declaration-merging': 'error',
+    'typescript/no-unsafe-function-type': 'error',
+    'typescript/prefer-as-const': 'error',
+    'typescript/prefer-for-of': 'error',
+    'typescript/prefer-literal-enum-member': 'error',
+    'typescript/prefer-namespace-keyword': 'error',
+    'typescript/unified-signatures': 'error',
+
+    // ── Import (11 rules) ───────────────────────────────────────────────
+    'import/default': 'error',
+    'import/export': 'error',
+    'import/first': 'error',
+    'import/namespace': 'error',
+    'import/no-absolute-path': 'error',
+    'import/no-default-export': 'error',
+    'import/no-duplicates': 'error',
+    'import/no-named-as-default': 'warn',
+    'import/no-named-as-default-member': 'warn',
+    'import/no-named-default': 'error',
+    'import/no-webpack-loader-syntax': 'error',
+
+    // ── JSDoc (12 rules) ────────────────────────────────────────────────
+    'jsdoc/check-access': 'warn',
+    'jsdoc/check-property-names': 'warn',
+    'jsdoc/check-tag-names': 'warn',
+    'jsdoc/empty-tags': 'warn',
+    'jsdoc/implements-on-classes': 'warn',
+    'jsdoc/no-defaults': 'warn',
+    'jsdoc/require-param': 'warn',
+    'jsdoc/require-param-description': 'warn',
+    'jsdoc/require-param-name': 'warn',
+    'jsdoc/require-property': 'warn',
+    'jsdoc/require-property-description': 'warn',
+    'jsdoc/require-property-name': 'warn',
+    'jsdoc/require-returns-description': 'warn',
+    'jsdoc/require-yields': 'warn',
+
+    // ── Promise (12 rules) ──────────────────────────────────────────────
+    'promise/always-return': 'error',
+    'promise/catch-or-return': 'error',
+    'promise/no-callback-in-promise': 'warn',
+    'promise/no-nesting': 'warn',
+    'promise/no-new-statics': 'error',
+    'promise/no-promise-in-callback': 'warn',
+    'promise/no-return-in-finally': 'warn',
+    'promise/no-return-wrap': 'error',
+    'promise/param-names': 'error',
+    'promise/prefer-await-to-callbacks': 'error',
+    'promise/prefer-await-to-then': ['error', { strict: true }],
+    'promise/valid-params': 'warn',
+
+    // ── Node (3 rules) ──────────────────────────────────────────────────
+    'node/no-exports-assign': 'error',
+    'node/no-new-require': 'error',
+    'node/no-path-concat': 'error'
+  },
+
+  overrides: [
+    {
+      files: ['**/*.test.ts'],
+      rules: {
+        'jest/expect-expect': 'error',
+        'jest/no-commented-out-tests': 'error',
+        'jest/no-identical-title': 'error',
+        'vitest/no-import-node-test': 'error',
+        'vitest/require-local-test-context-for-concurrent-snapshots': 'error',
+        'jest/valid-describe-callback': 'error',
+        'jest/valid-expect': 'error',
+        'jest/valid-title': 'error',
+        'jest/max-nested-describe': ['error', { max: 3 }],
+        'jest/no-hooks': ['error', { allow: ['afterEach'] }]
+      }
+    },
+    {
+      files: ['*.config.ts', '**/index.ts'],
+      rules: {
+        'import/no-default-export': 'off'
+      }
+    }
+  ],
+
+  ignorePatterns: ['build', 'node_modules', 'coverage']
+} as const
+
+// biome-ignore lint/style/noDefaultExport: required for oxlint shared config consumption
+export default axiom
