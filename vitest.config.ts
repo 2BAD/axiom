@@ -5,8 +5,8 @@ export default defineConfig({
   test: {
     exclude: ['build', 'node_modules'],
     coverage: {
-      exclude: ['build', ...coverageConfigDefaults.exclude],
       include: ['source/**/*.{ts,tsx}'],
+      exclude: ['build', ...coverageConfigDefaults.exclude],
       provider: 'v8',
       thresholds: {
         branches: 80,

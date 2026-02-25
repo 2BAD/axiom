@@ -39,10 +39,10 @@
   ],
   "scripts": {
     "build": "tsdown",
-    "check": "run-p check:*",
+    "check": "run-p check:**",
     "check:code": "oxlint ./source",
     "check:format": "oxfmt --check ./source",
-    "fix": "run-p fix:*",
+    "fix": "run-p fix:**",
     "fix:code": "oxlint --fix ./source",
     "fix:format": "oxfmt ./source",
     "prepublishOnly": "run-s build",
