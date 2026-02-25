@@ -7,7 +7,7 @@ on:
 jobs:
   publish:
     name: publish
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2404
 
     permissions:
       contents: read
@@ -17,12 +17,14 @@ jobs:
       - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
         with:
           persist-credentials: false
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
           node-version-file: package.json
           registry-url: https://registry.npmjs.org
+          cache: pnpm
 
-      - run: npm ci
-      - run: npm publish --provenance --access public
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm publish --provenance --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

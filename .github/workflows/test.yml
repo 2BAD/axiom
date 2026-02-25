@@ -19,34 +19,38 @@ jobs:
           - 22
           - 24
         os-release:
-          - ubuntu-latest
-          - windows-latest
+          - blacksmith-4vcpu-ubuntu-2404
+          - blacksmith-4vcpu-windows-2025
 
     steps:
       - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
         with:
           persist-credentials: false
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
           node-version: ${{ matrix.node-version }}
+          cache: pnpm
 
-      - run: npm ci
-      - run: npm run test
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
 
   coverage:
     name: collect coverage
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2404
     steps:
       - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
         with:
           persist-credentials: false
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
           node-version-file: package.json
+          cache: pnpm
 
-      - run: npm ci
+      - run: pnpm install --frozen-lockfile
 
-      - run: npm run test:unit
+      - run: pnpm test:unit
       - uses: codecov/codecov-action@671740ac38dd9b0130fbe1cec585b89eea48d3de # v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -54,7 +58,7 @@ jobs:
 
       # - run: rm -rf coverage
 
-      # - run: npm run test:integration
+      # - run: pnpm test:integration
       # - uses: codecov/codecov-action@eaaf4bedf32dbdc6b720b63067d99c4d77d6047d # v3
       #   with:
       #     token: ${{ secrets.CODECOV_TOKEN }}
