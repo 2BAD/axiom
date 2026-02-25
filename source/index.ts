@@ -3,7 +3,6 @@ export const axiom = {
 
   rules: {
     // ── ESLint core (60 rules) ──────────────────────────────────────────
-    // biome-ignore lint/style/useNamingConvention: oxlint rule option name
     'eslint/accessor-pairs': ['error', { enforceForTSTypes: false, enforceForClassMembers: true, setWithoutGet: true }],
     'eslint/array-callback-return': ['error', { allowImplicit: false, checkForEach: false }],
     'eslint/curly': ['error', 'multi-line'],
@@ -199,5 +198,4 @@ export const axiom = {
   ignorePatterns: ['build', 'node_modules', 'coverage']
 } as const
 
-// biome-ignore lint/style/noDefaultExport: required for oxlint shared config consumption
 export default axiom
