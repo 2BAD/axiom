@@ -54,12 +54,12 @@
   "devDependencies": {
     "@2bad/tsconfig": "3.0.2",
     "@arethetypeswrong/cli": "0.18.2",
-    "@types/node": "25.3.3",
+    "@types/node": "25.3.0",
     "@vitest/coverage-v8": "4.0.18",
     "npm-run-all2": "8.0.4",
-    "oxfmt": "0.36.0",
-    "oxlint": "1.51.0",
-    "publint": "0.3.18",
+    "oxfmt": "0.35.0",
+    "oxlint": "1.50.0",
+    "publint": "0.3.17",
     "tsdown": "0.20.3",
     "typescript": "5.9.3",
     "vite-tsconfig-paths": "6.1.1",
@@ -68,13 +68,13 @@
   "peerDependencies": {
     "oxlint": ">= 1"
   },
-  "packageManager": "pnpm@10.30.3",
+  "packageManager": "pnpm@10.30.1",
   "engines": {
     "node": ">=24"
   },
   "volta": {
-    "node": "24.14.0",
-    "pnpm": "10.30.3"
+    "node": "24.13.1",
+    "pnpm": "10.30.1"
   },
   "pnpm": {
     "onlyBuiltDependencies": ["esbuild"]
