@@ -1,93 +1,67 @@
 # Axiom
 
-Effortless TypeScript linting with zero configuration
-
-## Features
-
-- Zero configuration required
-- Comprehensive set of ESLint rules based on best practices
-- Automatic management of ESLint plugins
-- Customizable plugin selection
-- Simplified setup process
-- Consistent code style across projects
+A shared [oxlint](https://oxc.rs/docs/guide/usage/linter.html) config for TypeScript projects.
 
 ## Overview
 
-Axiom is a zero-configuration ESLint package that not only provides the best set of rules (inspired by StandardJS) but also manages other ESLint plugins. This removes the need for discussing and configuring ESLint rules, as well as maintaining and version tracking of various plugins.
+Axiom is a curated, opinionated set of oxlint rules — the linting distilled from years of ESLint configs, now running on the OXC toolchain. Drop it into `oxlint.config.ts` and get a sensible baseline without picking rules one by one.
 
-With ESLint v9 flat configs, configurations can become complex, and mistakes can happen even in the setup. Axiom simplifies this process, allowing developers to focus on writing code rather than configuring linters.
+Covers 137 rules across 9 plugins: `eslint`, `typescript`, `oxc`, `import`, `jsdoc`, `promise`, `node`, `unicorn`, and `vitest`/`jest` (scoped to test files).
 
-## Quick Start
-
-1. Install Axiom:
+## Install
 
 ```bash
-npm install --save-dev @2bad/axiom
+pnpm add -D @2bad/axiom oxlint
 ```
 
-2. Create an `eslint.config.mjs` file in your project root:
+`oxlint` is a peer dependency. Version `>= 1.60` is required.
 
-```javascript
+## Usage
+
+Create `oxlint.config.ts` in your project root:
+
+```ts
 import { axiom } from '@2bad/axiom'
+import { defineConfig } from 'oxlint'
 
-export default axiom(import.meta.dirname)
+export default defineConfig({ extends: [axiom] })
 ```
 
-You can also customize which plugins to enable:
-
-```javascript
-import { axiom } from '@2bad/axiom'
-
-// Disable vitest and node plugins
-export default axiom(import.meta.dirname, {
-  vitest: false,
-  node: false
-})
-
-// Or enable only specific plugins
-export default axiom(import.meta.dirname, {
-  import: true,
-  jsdoc: false,
-  neostandard: false,
-  node: false,
-  promise: false,
-  vitest: false
-})
-```
-
-3. Add a lint script to your `package.json`:
+Add lint scripts to `package.json`:
 
 ```json
 {
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "check": "oxlint ./source",
+    "fix": "oxlint --fix ./source"
   }
 }
 ```
 
-4. Run the linter:
+## Overriding rules
 
-```bash
-npm run lint
+`extends` merges — add your own `rules`, `overrides`, or `ignorePatterns` alongside and they win:
+
+```ts
+import { axiom } from '@2bad/axiom'
+import { defineConfig } from 'oxlint'
+
+export default defineConfig({
+  extends: [axiom],
+  rules: {
+    'typescript/no-explicit-any': 'off'
+  }
+})
 ```
 
-## Why Axiom?
+## Formatting
 
-Axiom aims to solve the following problems:
-
-1. **Configuration Overload**: With the multitude of ESLint plugins and rules available, configuring a linter can be overwhelming. Axiom provides a curated set of rules out of the box.
-
-2. **Plugin Management**: Keeping track of multiple ESLint plugins, their versions, and configurations can be time-consuming. Axiom manages this for you.
-
-3. **Consistency**: By providing a standard set of rules, Axiom ensures consistency across projects and team members.
-
-4. **Focus on Code**: Spend less time configuring and more time coding. Axiom handles the linting details so you can focus on writing great JavaScript.
+Axiom only handles linting. Pair with [oxfmt](https://www.npmjs.com/package/oxfmt) for formatting — all stylistic concerns (quotes, indentation, semis, spacing) live there, not in the lint rules.
 
 ## Why "Axiom"?
 
-In mathematics and logic, an axiom is a statement that is taken to be true without proof. Similarly, Axiom provides a set of linting rules that are considered best practices without the need for debate or configuration.
+In mathematics, an axiom is a statement taken to be true without proof. These rules are the baseline; debate ends here.
 
 ## Contributing
 
-Contributions are welcome! Please check out the [issues](https://github.com/2bad/axiom/issues) or submit a pull request.
+Contributions welcome. See [issues](https://github.com/2BAD/axiom/issues) or submit a PR.
