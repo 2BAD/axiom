@@ -16,7 +16,6 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 22
           - 24
         os-release:
           - blacksmith-4vcpu-ubuntu-2404
