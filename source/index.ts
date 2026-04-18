@@ -77,7 +77,7 @@ export const axiom = {
     'typescript/prefer-literal-enum-member': 'error',
     'typescript/unified-signatures': 'error',
 
-    // ── Import (11 rules) ───────────────────────────────────────────────
+    // ── Import ──────────────────────────────────────────────────────────
     'import/default': 'error',
     'import/export': 'error',
     'import/first': 'error',
@@ -90,7 +90,7 @@ export const axiom = {
     'import/no-named-default': 'error',
     'import/no-webpack-loader-syntax': 'error',
 
-    // ── JSDoc (12 rules) ────────────────────────────────────────────────
+    // ── JSDoc ───────────────────────────────────────────────────────────
     'jsdoc/check-access': 'warn',
     'jsdoc/check-property-names': 'warn',
     'jsdoc/check-tag-names': 'warn',
@@ -106,7 +106,7 @@ export const axiom = {
     'jsdoc/require-returns-description': 'warn',
     'jsdoc/require-yields': 'warn',
 
-    // ── Promise (12 rules) ──────────────────────────────────────────────
+    // ── Promise ─────────────────────────────────────────────────────────
     'promise/always-return': 'error',
     'promise/catch-or-return': 'error',
     'promise/no-callback-in-promise': 'warn',
@@ -120,13 +120,13 @@ export const axiom = {
     'promise/prefer-await-to-then': ['error', { strict: true }],
     'promise/valid-params': 'warn',
 
-    // ── Node (4 rules) ──────────────────────────────────────────────────
+    // ── Node ────────────────────────────────────────────────────────────
     'node/handle-callback-err': ['error', '^(err|error)$'],
     'node/no-exports-assign': 'error',
     'node/no-new-require': 'error',
     'node/no-path-concat': 'error',
 
-    // ── Unicorn (2 rules) ───────────────────────────────────────────────
+    // ── Unicorn ─────────────────────────────────────────────────────────
     'unicorn/no-process-exit': 'error',
     'unicorn/prefer-node-protocol': 'error'
   },
