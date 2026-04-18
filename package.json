@@ -61,7 +61,7 @@
     "oxlint": "1.60.0",
     "publint": "0.3.18",
     "tsdown": "0.21.8",
-    "typescript": "5.9.3",
+    "typescript": "6.0.2",
     "vite-tsconfig-paths": "6.1.1",
     "vitest": "4.1.4"
   },
