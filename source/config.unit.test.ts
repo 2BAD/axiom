@@ -8,7 +8,7 @@ describe('axiom oxlint config', () => {
   })
 
   it('should include all required plugins', () => {
-    const expected = ['eslint', 'typescript', 'oxc', 'import', 'jsdoc', 'promise', 'node', 'vitest']
+    const expected = ['eslint', 'typescript', 'oxc', 'import', 'jsdoc', 'promise', 'node', 'unicorn', 'vitest']
     expect(axiom.plugins).toEqual(expected)
   })
 

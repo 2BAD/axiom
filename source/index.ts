@@ -1,8 +1,8 @@
 export const axiom = {
-  plugins: ['eslint', 'typescript', 'oxc', 'import', 'jsdoc', 'promise', 'node', 'vitest'],
+  plugins: ['eslint', 'typescript', 'oxc', 'import', 'jsdoc', 'promise', 'node', 'unicorn', 'vitest'],
 
   rules: {
-    // ── ESLint core (60 rules) ──────────────────────────────────────────
+    // ── ESLint core (59 rules) ──────────────────────────────────────────
     'eslint/accessor-pairs': ['error', { enforceForTSTypes: false, enforceForClassMembers: true, setWithoutGet: true }],
     'eslint/array-callback-return': ['error', { allowImplicit: false, checkForEach: false }],
     'eslint/curly': ['error', 'multi-line'],
@@ -36,7 +36,6 @@ export const axiom = {
     'eslint/no-extra-boolean-cast': 'error',
     'eslint/no-fallthrough': 'error',
     'eslint/no-global-assign': 'error',
-    'eslint/no-implied-eval': 'error',
     'eslint/no-invalid-regexp': 'error',
     'eslint/no-irregular-whitespace': 'error',
     'eslint/no-iterator': 'error',
@@ -87,9 +86,9 @@ export const axiom = {
     'eslint/no-var': 'warn',
     'eslint/no-void': ['error', { allowAsStatement: true }],
     'eslint/no-with': 'error',
+    'eslint/object-shorthand': ['warn', 'properties'],
     'eslint/prefer-const': ['error', { destructuring: 'all' }],
     'eslint/prefer-promise-reject-errors': 'error',
-    'eslint/prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
     'eslint/prefer-rest-params': 'error',
     'eslint/prefer-spread': 'error',
     'eslint/require-yield': 'error',
@@ -99,27 +98,33 @@ export const axiom = {
     'eslint/valid-typeof': ['error', { requireStringLiterals: true }],
     'eslint/yoda': ['error', 'never'],
 
-    // ── TypeScript (24 rules) ───────────────────────────────────────────
+    // ── TypeScript (27 rules) ───────────────────────────────────────────
     'typescript/ban-ts-comment': ['error', { minimumDescriptionLength: 10 }],
+    'typescript/no-duplicate-enum-values': 'error',
     'typescript/no-dynamic-delete': 'error',
     'typescript/no-empty-object-type': 'error',
     'typescript/no-explicit-any': 'error',
     'typescript/no-extra-non-null-assertion': 'error',
     'typescript/no-extraneous-class': 'error',
     'typescript/no-floating-promises': 'error',
+    'typescript/no-implied-eval': 'error',
     'typescript/no-invalid-void-type': 'error',
     'typescript/no-misused-new': 'error',
     'typescript/no-namespace': 'error',
     'typescript/no-non-null-asserted-nullish-coalescing': 'error',
+    'typescript/no-non-null-asserted-optional-chain': 'error',
+    'typescript/no-non-null-assertion': 'error',
     'typescript/no-require-imports': 'error',
     'typescript/no-this-alias': 'error',
     'typescript/no-unnecessary-type-constraint': 'error',
     'typescript/no-unsafe-declaration-merging': 'error',
     'typescript/no-unsafe-function-type': 'error',
+    'typescript/no-wrapper-object-types': 'error',
     'typescript/prefer-as-const': 'error',
     'typescript/prefer-for-of': 'error',
     'typescript/prefer-literal-enum-member': 'error',
     'typescript/prefer-namespace-keyword': 'error',
+    'typescript/triple-slash-reference': 'error',
     'typescript/unified-signatures': 'error',
 
     // ── Import (11 rules) ───────────────────────────────────────────────
@@ -165,10 +170,15 @@ export const axiom = {
     'promise/prefer-await-to-then': ['error', { strict: true }],
     'promise/valid-params': 'warn',
 
-    // ── Node (3 rules) ──────────────────────────────────────────────────
+    // ── Node (4 rules) ──────────────────────────────────────────────────
+    'node/handle-callback-err': ['error', '^(err|error)$'],
     'node/no-exports-assign': 'error',
     'node/no-new-require': 'error',
-    'node/no-path-concat': 'error'
+    'node/no-path-concat': 'error',
+
+    // ── Unicorn (2 rules) ───────────────────────────────────────────────
+    'unicorn/no-process-exit': 'error',
+    'unicorn/prefer-node-protocol': 'error'
   },
 
   overrides: [

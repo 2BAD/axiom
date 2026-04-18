@@ -16,14 +16,16 @@ This document tracks the migration from ESLint to [oxlint](https://oxc.rs/docs/g
 | Category | Total | ✅ Available | ❌ No Equivalent | 🔧 Formatter |
 |---|---|---|---|---|
 | ESLint core | 68 | 60 | 8 | 0 |
-| @typescript-eslint | 30 | 24 | 6 | 0 |
+| @typescript-eslint | 30 | 27 | 3 | 0 |
 | @stylistic | 53 | 0 | 0 | 53 |
 | import-x | 12 | 11 | 1 | 0 |
 | jsdoc | 33 | 12 | 21 | 0 |
-| n (node) | 18 | 3 | 15 | 0 |
+| n (node) | 18 | 5 | 13 | 0 |
 | promise | 12 | 12 | 0 | 0 |
 | vitest | 10 | 10 | 0 | 0 |
-| **Total** | **236** | **132** | **51** | **53** |
+| **Total** | **236** | **137** | **46** | **53** |
+
+_Baseline reflects oxlint 1.60.0. Five gaps closed since the initial 1.50.0 migration: `object-shorthand`, `no-duplicate-enum-values`, `no-non-null-asserted-optional-chain`, `no-non-null-assertion`, `no-wrapper-object-types`, `triple-slash-reference` (typescript plugin); `handle-callback-err` (node plugin); `no-process-exit`, `prefer-node-protocol` (unicorn plugin). Also: `no-implied-eval` moved from `eslint/` to `typescript/`, and `prefer-regex-literals` was removed upstream with no replacement._
 
 ---
 
@@ -133,7 +135,7 @@ All `@stylistic` rules handle formatting and are **already covered by Biome**. T
 | `no-extra-boolean-cast` | error | | `eslint/no-extra-boolean-cast` | ✅ |
 | `no-fallthrough` | error | | `eslint/no-fallthrough` | ✅ |
 | `no-global-assign` | error | | `eslint/no-global-assign` | ✅ |
-| `no-implied-eval` | error | | `eslint/no-implied-eval` | ✅ |
+| `no-implied-eval` | error | | `typescript/no-implied-eval` | ✅ |
 | `no-invalid-regexp` | error | | `eslint/no-invalid-regexp` | ✅ |
 | `no-irregular-whitespace` | error | `{skipStrings: true}` | `eslint/no-irregular-whitespace` | ✅ |
 | `no-iterator` | error | | `eslint/no-iterator` | ✅ |
@@ -178,11 +180,11 @@ All `@stylistic` rules handle formatting and are **already covered by Biome**. T
 | `no-var` | warn | | `eslint/no-var` | ✅ |
 | `no-void` | error | `{allowAsStatement: true}` | `eslint/no-void` | ✅ |
 | `no-with` | error | | `eslint/no-with` | ✅ |
-| `object-shorthand` | warn | `"properties"` | — | ❌ |
+| `object-shorthand` | warn | `"properties"` | `eslint/object-shorthand` | ✅ |
 | `one-var` | error | `{initialized: "never"}` | — | ❌ |
 | `prefer-const` | error | `{destructuring: "all"}` | `eslint/prefer-const` | ✅ |
 | `prefer-promise-reject-errors` | error | | `eslint/prefer-promise-reject-errors` | ✅ |
-| `prefer-regex-literals` | error | `{disallowRedundantWrapping: true}` | `eslint/prefer-regex-literals` | ✅ |
+| `prefer-regex-literals` | error | `{disallowRedundantWrapping: true}` | — | ❌ |
 | `prefer-rest-params` | error | | `eslint/prefer-rest-params` | ✅ |
 | `prefer-spread` | error | | `eslint/prefer-spread` | ✅ |
 | `require-yield` | error | | `eslint/require-yield` | ✅ |
@@ -201,7 +203,7 @@ All `@stylistic` rules handle formatting and are **already covered by Biome**. T
 | `@typescript-eslint/ban-ts-comment` | error | `{minimumDescriptionLength: 10}` | `typescript/ban-ts-comment` | ✅ |
 | `@typescript-eslint/no-array-constructor` | error | | `eslint/no-array-constructor` | ✅ |
 | `@typescript-eslint/no-dupe-class-members` | error | | `eslint/no-dupe-class-members` | ✅ |
-| `@typescript-eslint/no-duplicate-enum-values` | error | | — | ❌ |
+| `@typescript-eslint/no-duplicate-enum-values` | error | | `typescript/no-duplicate-enum-values` | ✅ |
 | `@typescript-eslint/no-dynamic-delete` | error | | `typescript/no-dynamic-delete` | ✅ |
 | `@typescript-eslint/no-empty-object-type` | error | | `typescript/no-empty-object-type` | ✅ |
 | `@typescript-eslint/no-explicit-any` | error | | `typescript/no-explicit-any` | ✅ |
@@ -213,8 +215,8 @@ All `@stylistic` rules handle formatting and are **already covered by Biome**. T
 | `@typescript-eslint/no-misused-new` | error | | `typescript/no-misused-new` | ✅ |
 | `@typescript-eslint/no-namespace` | error | | `typescript/no-namespace` | ✅ |
 | `@typescript-eslint/no-non-null-asserted-nullish-coalescing` | error | | `typescript/no-non-null-asserted-nullish-coalescing` | ✅ |
-| `@typescript-eslint/no-non-null-asserted-optional-chain` | error | | — | ❌ |
-| `@typescript-eslint/no-non-null-assertion` | error | | — | ❌ |
+| `@typescript-eslint/no-non-null-asserted-optional-chain` | error | | `typescript/no-non-null-asserted-optional-chain` | ✅ |
+| `@typescript-eslint/no-non-null-assertion` | error | | `typescript/no-non-null-assertion` | ✅ |
 | `@typescript-eslint/no-redeclare` | error | `{builtinGlobals: false}` | `eslint/no-redeclare` | ✅ |
 | `@typescript-eslint/no-require-imports` | error | | `typescript/no-require-imports` | ✅ |
 | `@typescript-eslint/no-this-alias` | error | | `typescript/no-this-alias` | ✅ |
@@ -225,12 +227,12 @@ All `@stylistic` rules handle formatting and are **already covered by Biome**. T
 | `@typescript-eslint/no-unused-vars` | error | `{args: "none", caughtErrors: "none", ignoreRestSiblings: true}` | `eslint/no-unused-vars` | ✅ |
 | `@typescript-eslint/no-use-before-define` | error | `{functions: false, classes: false, variables: false}` | `eslint/no-use-before-define` | ✅ |
 | `@typescript-eslint/no-useless-constructor` | error | | `eslint/no-useless-constructor` | ✅ |
-| `@typescript-eslint/no-wrapper-object-types` | error | | — | ❌ |
+| `@typescript-eslint/no-wrapper-object-types` | error | | `typescript/no-wrapper-object-types` | ✅ |
 | `@typescript-eslint/prefer-as-const` | error | | `typescript/prefer-as-const` | ✅ |
 | `@typescript-eslint/prefer-for-of` | error | | `typescript/prefer-for-of` | ✅ |
 | `@typescript-eslint/prefer-literal-enum-member` | error | | `typescript/prefer-literal-enum-member` | ✅ |
 | `@typescript-eslint/prefer-namespace-keyword` | error | | `typescript/prefer-namespace-keyword` | ✅ |
-| `@typescript-eslint/triple-slash-reference` | error | | — | ❌ |
+| `@typescript-eslint/triple-slash-reference` | error | | `typescript/triple-slash-reference` | ✅ |
 | `@typescript-eslint/unified-signatures` | error | | `typescript/unified-signatures` | ✅ |
 
 ---
@@ -300,7 +302,7 @@ All `@stylistic` rules handle formatting and are **already covered by Biome**. T
 
 | Rule | Severity | Options | OXC | Status |
 |---|---|---|---|---|
-| `n/handle-callback-err` | error | `"^(err\|error)$"` | — | ❌ |
+| `n/handle-callback-err` | error | `"^(err\|error)$"` | `node/handle-callback-err` | ✅ |
 | `n/hashbang` | error | | — | ❌ |
 | `n/no-callback-literal` | error | | — | ❌ |
 | `n/no-deprecated-api` | error | | — | ❌ |
@@ -309,14 +311,14 @@ All `@stylistic` rules handle formatting and are **already covered by Biome**. T
 | `n/no-missing-require` | error | | — | ❌ |
 | `n/no-new-require` | error | | `node/no-new-require` | ✅ |
 | `n/no-path-concat` | error | | `node/no-path-concat` | ✅ |
-| `n/no-process-exit` | error | | — | ❌ |
+| `n/no-process-exit` | error | | `unicorn/no-process-exit` | ✅ |
 | `n/no-unpublished-bin` | error | | — | ❌ |
 | `n/no-unpublished-import` | error | | — | ❌ |
 | `n/no-unpublished-require` | error | | — | ❌ |
 | `n/no-unsupported-features/es-builtins` | error | | — | ❌ |
 | `n/no-unsupported-features/es-syntax` | error | `{ignores: ["modules"]}` | — | ❌ |
 | `n/no-unsupported-features/node-builtins` | error | | — | ❌ |
-| `n/prefer-node-protocol` | error | | — | ❌ |
+| `n/prefer-node-protocol` | error | | `unicorn/prefer-node-protocol` | ✅ |
 | `n/process-exit-as-throw` | error | | — | ❌ |
 
 ---
@@ -357,7 +359,7 @@ All `@stylistic` rules handle formatting and are **already covered by Biome**. T
 
 ---
 
-## Rules with no OXC equivalent (51 rules)
+## Rules with no OXC equivalent (46 rules)
 
 These rules have no direct OXC replacement and need decisions:
 
@@ -366,18 +368,13 @@ These rules have no direct OXC replacement and need decisions:
 - `no-octal-escape` — rarely encountered in modern code
 - `no-undef-init` — minor style preference
 - `no-unreachable-loop` — edge case detection
-- `object-shorthand` — style preference
 - `one-var` — style preference
-- `camelcase` — naming convention (Biome has `useNamingConvention`)
-- `@typescript-eslint/no-non-null-asserted-optional-chain` — niche
-- `@typescript-eslint/no-non-null-assertion` — consider if critical
-- `@typescript-eslint/no-wrapper-object-types` — niche
-- `@typescript-eslint/triple-slash-reference` — rarely used
-- `@typescript-eslint/no-duplicate-enum-values` — TypeScript itself catches some of this
+- `camelcase` — naming convention
+- `prefer-regex-literals` — previously available, removed upstream with no replacement
 
 ### May need alternative tooling
 - `import-x/no-unresolved` — TypeScript compiler handles this
-- `n/*` rules (15 rules) — Node.js-specific checks with no OXC coverage
+- `n/*` rules (13 rules) — Node.js-specific checks with no OXC coverage
 - `jsdoc/*` rules (21 rules) — JSDoc validation with limited OXC coverage
 
 ---
@@ -402,8 +399,10 @@ These rules have no direct OXC replacement and need decisions:
 
 ## Final disposition
 
-- **132 rules** migrated to oxlint (ESLint core, TypeScript, import, jsdoc, promise, node, vitest)
-- **53 rules** dropped — formatting handled by Biome
-- **51 rules** accepted as gaps — mostly jsdoc (21) and node (15) rules with no OXC equivalent
+- **137 rules** migrated to oxlint (ESLint core, TypeScript, import, jsdoc, promise, node, unicorn, vitest)
+- **53 rules** dropped — formatting handled by oxfmt
+- **46 rules** accepted as gaps — mostly jsdoc (21) and node (13) rules with no OXC equivalent
 - **1 rule** (`no-irregular-whitespace`) options dropped — OXC version does not accept options
+- **1 rule** (`prefer-regex-literals`) regressed — available in 1.50, removed upstream before 1.60, no replacement
+- **1 rule** (`no-implied-eval`) moved between plugins — now lives under `typescript/`, not `eslint/`
 - Package transformed from ESLint config generator function to shared oxlint config object
