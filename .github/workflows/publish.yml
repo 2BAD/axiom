@@ -38,4 +38,4 @@ jobs:
         env:
           NPM_TAG: ${{ steps.dist-tag.outputs.tag }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm publish --provenance --access public --tag "$NPM_TAG"
+        run: pnpm publish --provenance --access public --no-git-checks --tag "$NPM_TAG"
