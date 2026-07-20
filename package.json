@@ -57,10 +57,10 @@
     "@types/node": "25.9.5",
     "@vitest/coverage-v8": "4.1.10",
     "npm-run-all2": "8.0.4",
-    "oxfmt": "0.58.0",
-    "oxlint": "1.73.0",
+    "oxfmt": "0.59.0",
+    "oxlint": "1.74.0",
     "publint": "0.3.21",
-    "tsdown": "0.22.4",
+    "tsdown": "0.22.9",
     "typescript": "6.0.3",
     "vite-tsconfig-paths": "6.1.1",
     "vitest": "4.1.10"
@@ -68,13 +68,13 @@
   "peerDependencies": {
     "oxlint": ">= 1.60"
   },
-  "packageManager": "pnpm@10.34.4",
+  "packageManager": "pnpm@10.34.5",
   "engines": {
     "node": ">=24"
   },
   "volta": {
     "node": "24.18.0",
-    "pnpm": "10.34.4"
+    "pnpm": "10.34.5"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
