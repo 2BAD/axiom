@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0]
+
+### Changed
+
+- Toolchain maintenance: TypeScript 7, oxlint 1.76, oxfmt 0.61, pnpm 11, `@2bad/tsconfig` 4.
+- Build now emits declarations via TypeScript 7. Types are unchanged; only quoting in the emitted `.d.ts` differs.
+
+The exported config is unchanged from 2.0.0. No rules were added, removed, or re-severed, and the `oxlint >= 1.60` peer range still applies.
+
 ## [2.0.0]
 
 ### Breaking Changes
