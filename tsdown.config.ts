@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsdown'
 
 export default defineConfig({
-  entry: ['source/index.ts'],
+  entry: ['source/**/*.ts', '!source/**/*.test.ts'],
   outDir: 'build',
   format: 'es',
   fixedExtension: false,

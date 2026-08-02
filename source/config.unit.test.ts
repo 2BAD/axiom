@@ -20,7 +20,7 @@ describe('axiom oxlint config', () => {
   it('should scope vitest/jest rules to test files via overrides', () => {
     expect(axiom.overrides.length).toBeGreaterThanOrEqual(1)
 
-    const testOverride = axiom.overrides.find((o) => o.files.includes('**/*.test.ts'))
+    const testOverride = axiom.overrides.find((o) => (o.files as readonly string[]).includes('**/*.test.ts'))
     expect(testOverride).toBeDefined()
 
     const ruleNames = Object.keys(testOverride?.rules ?? {})
@@ -36,6 +36,6 @@ describe('axiom oxlint config', () => {
     expect(axiom.rules['eslint/no-void']).toEqual(['error', { allowAsStatement: true }])
     expect(axiom.rules['eslint/no-var']).toBe('warn')
     expect(axiom.rules['typescript/ban-ts-comment']).toEqual(['error', { minimumDescriptionLength: 10 }])
-    expect(axiom.rules['jest/max-nested-describe']).toBeUndefined()
+    expect(Object.keys(axiom.rules).some((r) => r.startsWith('jest/') || r.startsWith('vitest/'))).toBe(false)
   })
 })
