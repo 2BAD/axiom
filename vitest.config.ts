@@ -1,7 +1,9 @@
-import tsconfigPaths from 'vite-tsconfig-paths'
 import { coverageConfigDefaults, defineConfig } from 'vitest/config'
 
 export default defineConfig({
+  resolve: {
+    tsconfigPaths: true
+  },
   test: {
     exclude: ['build', 'node_modules'],
     coverage: {
@@ -16,6 +18,5 @@ export default defineConfig({
       }
     },
     testTimeout: 30000
-  },
-  plugins: [tsconfigPaths()]
+  }
 })
