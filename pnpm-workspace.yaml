@@ -1,4 +1,4 @@
 allowBuilds:
   esbuild: true
 minimumReleaseAgeExclude:
-  - '@2bad/tsconfig@4.0.0'
+  - '@2bad/*'
