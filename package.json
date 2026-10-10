@@ -49,7 +49,6 @@
     "prepublishOnly": "run-s build",
     "preversion": "run-s check test build",
     "test": "vitest run",
-    "test:integration": "vitest run integration --coverage",
     "test:unit": "vitest run unit --coverage"
   },
   "devDependencies": {
