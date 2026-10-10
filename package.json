@@ -56,14 +56,14 @@
     "@2bad/tsconfig": "4.0.0",
     "@arethetypeswrong/cli": "0.18.5",
     "@types/node": "26.6.5",
-    "@vitest/coverage-v8": "4.1.11",
+    "@vitest/coverage-v8": "5.0.3",
     "npm-run-all2": "9.0.3",
     "oxfmt": "0.72.0",
     "oxlint": "1.87.0",
     "publint": "0.3.25",
     "tsdown": "0.23.0",
     "typescript": "7.0.2",
-    "vitest": "4.1.11"
+    "vitest": "5.0.3"
   },
   "peerDependencies": {
     "oxlint": ">= 1.60"
