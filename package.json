@@ -67,12 +67,12 @@
   "peerDependencies": {
     "oxlint": ">= 1.60"
   },
-  "packageManager": "pnpm@11.28.6",
+  "packageManager": "pnpm@12.14.0",
   "engines": {
     "node": ">=24"
   },
   "volta": {
     "node": "26.12.0",
-    "pnpm": "11.28.6"
+    "pnpm": "12.14.0"
   }
 }
